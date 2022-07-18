@@ -8,6 +8,9 @@ import { AiOutlineUser } from "react-icons/ai";
 
 
 export default function Header() {
+  function sayHello() {
+    alert('You clicked me!');
+  }
   return (
     <div>
       <div className='headerDiv'>
@@ -18,7 +21,8 @@ export default function Header() {
             title="Smart Street Lighting System"
             subTitle=""
           />
-          <button className='headerButton'>
+          
+          <button className='headerButton' onClick={sayHello}>
             <AiOutlineUser className='headerIcon' />
             <p>Akash</p>
           </button>
