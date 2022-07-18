@@ -1,7 +1,9 @@
 import React from 'react'
 import './Header.css'
 import { PageHeader } from 'antd';
-
+import System from "../screen/System"
+import About from '../screen/About';
+import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 export default function Header() {
   return (
     <div>
@@ -13,12 +15,10 @@ export default function Header() {
           subTitle=""
         />
         <nav>
-          <a className="link-1" href="#">Home</a>
-          <a className="link-1" href="#">System</a>
-          
-          <a className="link-1" href="#">About</a>
-          <a className="link-1" href="#">Contact</a>
-          
+          <Link className="link-1" to="/">Home</Link>
+          <Link className="link-1" to="/System">System</Link>
+          <Link className="link-1" to="/About">About</Link>
+          <Link className="link-1" to="/Contact">Contact</Link>
         </nav>
       </div>
       <div className='HeaderLineDiv'></div>

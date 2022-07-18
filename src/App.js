@@ -4,17 +4,32 @@ import React from 'react'
 import Home from './screen/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import System from './screen/System';
+import About from './screen/About';
+import Contact from './screen/Contact';
+import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 //import AnimatedCursor from "react-animated-cursor"
 
 function App() {
   return (
-    <div className="App">
-      
-      <Header/>
-     <Home/>
-     <Footer/>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+
+        <Header />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/System" element={<System />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+
+      </div>
+    </BrowserRouter>
   );
 }
 
 export default App;
+
+
