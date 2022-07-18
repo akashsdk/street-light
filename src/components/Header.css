@@ -3,7 +3,7 @@ body {
 }
 
 nav {
-    margin-top: 20px;
+    margin-top: 0px;
     padding: 24px;
     text-align: center;
     font-family: Raleway;
@@ -47,4 +47,18 @@ nav {
     border-top: 4px solid #ffffff;
     border-bottom: 4px solid #ffffff;
     padding: 6px 0;
+}
+.headerDivUp{
+    display: flex;
+    flex-direction: row;
+}
+.headerIcon{
+    font-size: 30px;
+    margin-top: 5px;
+    flex: 1;
+}
+.headerButton{
+    background-color:transparent;
+    border: none;
+    flex: 5;
 }
