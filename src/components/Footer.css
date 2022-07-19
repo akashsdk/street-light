@@ -14,3 +14,23 @@
     margin-top: 10px;
     background-color: #3fa46a;
 }
+.FooterFastDiv{
+    height: 80px;
+    background-color: #3fa46a;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.FooterScendDiv{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.FooterScendLeft{
+    height: auto;
+    width: auto;
+    margin-left: 30px;
+
+}
+.footerImage{
+    height: 300px;
+    width: 200px;
+}
