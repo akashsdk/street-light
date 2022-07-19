@@ -2,56 +2,49 @@
     border: 1.5px solid rgba(0, 0, 0, 0.05);
     border-color: rgb(2, 162, 60);
     margin: 100px;
-    padding: 30px;
+    padding-left: 200px;
+    padding-right: 200px;
     border-radius: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
-.profileFrom{
-    flex-direction: column;
-    display: flex;
-    margin-top: 20px;
-    justify-content: center;
-    align-items: center;
+.profileH2{
+    margin-top: 15px;
 }
-.profileFromDiv{
-    flex-direction: row;
-    display: flex;
-}
-.profileFromff{
-    font-size: 30px;
+.profileInputDiv{
+    height: 40px;
+    border-radius: 20px;
+    border: 1.5px solid rgba(0, 0, 0, 0.05);
+    border-color: rgb(158, 157, 157);
 }
 .profileInput{
-    height: 40px;
-    width: 400px;
+    height: auto;
+    width: 90%;
     background-color:transparent;
     border-width: 1px;
     border-radius: 20px;
+    margin-top: 5px;
+    border: none;
+    outline: none;
 }
 .profileSubmit{
     height: 40px;
-    width: 400px;
+    width: 100%;
+    background-color:white;
+    border-width: 1px;
     border-radius: 20px;
+    margin-top: 60px;
+    border-color: #3fa46a;
+    outline: none;
+}
+.profileSubmit:hover{
+    background-color: #3fa46a;
     border: none;
-    background-color: rgb(5, 235, 235);
 }
-.profileImage{
-    height: 200px;
-    width: 200px;
-    border-radius: 100px;
+.profileSubmitH1{
+    margin-top: -5px;
+    color: #3fa46a;
 }
-.profileImageDiv{
-    height: 210px;
-    width: 210px;
-    border-radius: 105px;
-    border-width: 1.5px;
-    background-color: aqua;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    margin-left: 250px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.profileNameDiv{
-    height: 40px;
-    margin-top: 10px;
+.profileSubmitH1:hover{
+    color: aliceblue;
 }

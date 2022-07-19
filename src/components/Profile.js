@@ -3,37 +3,32 @@ import './Profile.css'
 import Diamond from '../Image/Profile.jpeg'
 
 export default function Profile() {
-  const [text, setText] = useState("");
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setText(event.target[0].value)
-  };
-
+  function sayHello() {
+    alert('Submited!');
+  }
   return (
     <div className="profileDiv">
-      <div className="profileImageDiv">
-        <img src={Diamond} className="profileImage" />
+      <h2 className="profileH2">Name</h2>
+      <div className="profileInputDiv">
+        <input type="text" className="profileInput" placeholder="Name" />
       </div>
-      <div className="profileNameDiv">
-        <h1 className="profileNameDiv">{text}</h1>
+      <h2 className="profileH2">Username</h2>
+      <div className="profileInputDiv">
+        <input type="text" className="profileInput" placeholder="Username" />
       </div>
-      <form onSubmit={handleSubmit} className="profileFrom">
-        <div className="profileFromDiv">
-          <h2>Name:</h2>
-          <div>
-            <input type="text" className="profileInput" />
-          </div>
-
-        </div>
-        <button type="submit" className="profileSubmit">Submit</button>
-      </form>
-
-      <h1 className="profileFromff">ddd</h1>
-      <div>
-        <input type="radio" value="Male" name="gender" /> Male
-        <input type="radio" value="Female" name="gender" /> Female
-        <input type="radio" value="Other" name="gender" /> Other
+      <h2 className="profileH2">Password</h2>
+      <div className="profileInputDiv">
+        <input type="text" className="profileInput" placeholder="Password" />
       </div>
+      <h2 className="profileH2">Phone Number</h2>
+      <div className="profileInputDiv">
+        <input type="number" className="profileInput" placeholder="Phone Number" />
+      </div>
+      <button type="submit" className="profileSubmit" onClick={sayHello}>
+        <h1 className="profileSubmitH1">Submit</h1>
+      </button>
+      <div>gjhhjhkh</div>
+      <h1>hbjhgjhgS</h1>
     </div>
   )
 }

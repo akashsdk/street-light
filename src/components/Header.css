@@ -60,5 +60,9 @@ nav {
 .headerButton{
     background-color:transparent;
     border: none;
+}
+.headerButtonLink{
     flex: 5;
+    background-color:transparent;
+    color: rgb(255, 255, 255);
 }
