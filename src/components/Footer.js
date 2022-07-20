@@ -15,7 +15,9 @@ export default function Footer() {
           <div className='FooterScendLeft'>
             <img src={Light} className="footerImage" />
           </div>
-          <div>right</div>
+          <div>
+            <h1>akashtgy vjuhug ghhgh</h1>
+          </div>
           <div className='FooterScendLeft'>
             <img src={LightLeft} className="footerImage" />
           </div>
