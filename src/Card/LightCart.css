@@ -1,5 +1,28 @@
 .LightCartBody{
-    height: 50px;
-    width: 50px;
-    background-color: aqua;
+    height: 300px;
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    margin: 30px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0.3, 0, 0.3);
+}
+.LightCartBody{
+    font-size: 20px;
+}
+.LightCartBox{
+    display: flex;
+    flex-direction: row;
+}
+.LightCartImg{
+    height: 200px;
+    width: 150px;
+}
+.LightCartDownDiv{
+    height: auto;
+    width: auto;
+    background-color: aquamarine;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+.LightCartDownP{
+    font-size: 20px;
 }
