@@ -13,9 +13,9 @@ export default function LightCart() {
                 <div>
                     <img src={CardLight} className="LightCartImg" />
                 </div>
-                <div>
-                    <Switch onChange={setValue} checked={value} />
-                    <Switch onChange={setValue} checked={value} />
+                <div className='LightCartSwBox'>
+                    <h3>Power:</h3>
+                    <Switch onChange={setValue} checked={value} className="LightCartSwitch"/>
                 </div>
             </div>
             <div className='LightCartDownDiv'>

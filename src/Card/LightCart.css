@@ -26,3 +26,10 @@
 .LightCartDownP{
     font-size: 20px;
 }
+.LightCartSwBox{
+    flex-direction: row;
+    display: flex;
+}
+.LightCartSwitch{
+    margin: 8px;
+}
