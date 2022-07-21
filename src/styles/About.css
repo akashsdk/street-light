@@ -1,0 +1,56 @@
+.AboutHeader {
+    font-weight: 900;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.829);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AboutUnderline {
+    height: 5px;
+    margin-left: 39%;
+    width: 250px;
+    border-radius: 50%;
+    background-color: #3fa46a;
+}
+.AboutDocument{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+.AbDocuOne{
+    width: 45%;
+    border-radius: 10px;
+}
+.AbDocuTwo{
+    width: 45%;
+}
+.AbDocuThr{
+    width: 3px;
+    height: auto;
+    background-color:  #3fa46a;
+}
+.about{
+    font-weight: 900;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.829);
+}
+.abuintro{
+    font-weight: 900;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.829);
+}
+.aboutButton{
+    margin: 10px;
+}
+.intUnderline{
+    margin-left: 120PX;
+    height: 3px;
+    width: 250px;
+    border-radius: 50%;
+    background-color: #030303;
+}
+.abudic{
+    margin: 10px;
+}
