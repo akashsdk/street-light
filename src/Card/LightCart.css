@@ -33,3 +33,9 @@
 .LightCartSwitch{
     margin: 8px;
 }
+.LightCartBoxDiv{
+    height: 140px;
+    width: 140px;
+    border-radius: 15px;
+    background-color: aqua;
+}
