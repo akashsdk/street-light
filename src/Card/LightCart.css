@@ -26,6 +26,14 @@
 .LightCartDownP{
     font-size: 20px;
 }
+
+.LightCartLine{
+    height: 1.5px;
+    width: 170px;
+    margin-left: 65px;
+    margin-top: -10px;
+    background-color: rgb(165, 159, 159);
+}
 .LightCartSwBox{
     flex-direction: row;
     display: flex;
@@ -37,5 +45,6 @@
     height: 140px;
     width: 140px;
     border-radius: 15px;
-    background-color: aqua;
+    border: 1.5px solid rgba(0, 0, 0, 0.05);
+    
 }

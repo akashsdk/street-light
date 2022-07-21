@@ -8,7 +8,8 @@ export default function LightCart() {
     const [value, setValue] = React.useState()
     return (
         <div className='LightCartBody'>
-            <p className='LightCartBodyP'>Street Light</p>
+            <p className='LightCartBodyP'>Street Light-101</p>
+            <div className='LightCartLine'></div>
             <div className='LightCartBox'>
                 <img src={CardLight} className="LightCartImg" />
                 <div>
@@ -19,7 +20,7 @@ export default function LightCart() {
                     <div className='LightCartBoxDiv'>
                         <p>Power: ON</p>
                         <p>MNG: ON</p>
-                        <p>LDR: ON</p>
+                        <p>LDR: OFF</p>
                     </div>
                 </div>
             </div>

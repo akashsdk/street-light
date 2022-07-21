@@ -6,6 +6,7 @@ export default function System() {
   return (
     <div className='SystemBody'>
       <LightCart/>
+      <LightCart/>
     </div>
   )
 }
