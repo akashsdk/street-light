@@ -5,7 +5,7 @@ import Switch from "react-switch";
 
 
 export default function LightCart() {
-    const [value,setValue]=React.useState()
+    const [value, setValue] = React.useState()
     return (
         <div className='LightCartBody'>
             <p className='LightCartBodyP'>Street Light</p>
@@ -14,7 +14,8 @@ export default function LightCart() {
                     <img src={CardLight} className="LightCartImg" />
                 </div>
                 <div>
-                <Switch onChange={setValue} checked={value} />
+                    <Switch onChange={setValue} checked={value} />
+                    <Switch onChange={setValue} checked={value} />
                 </div>
             </div>
             <div className='LightCartDownDiv'>
