@@ -20,7 +20,7 @@
 .LightCartDownDiv{
     height: auto;
     width: auto;
-    background-color: aquamarine;
+    background-color: rgb(112, 251, 205);
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
 .LightCartDownP{
