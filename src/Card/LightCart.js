@@ -19,7 +19,7 @@ export default function LightCart() {
                 </div>
             </div>
             <div className='LightCartDownDiv'>
-                <p className='LightCartDownP'>Acctive jj</p>
+                <p className='LightCartDownP'>Acctive</p>
             </div>
         </div>
     )
