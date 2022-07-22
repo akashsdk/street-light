@@ -10,7 +10,7 @@ export default function Footer() {
       <div className='FooterLineDive'></div>
       <div className='FooterBody'>
         <div className='FooterFastDiv'>
-          <h1>1ts div</h1>
+          <h1 className='FooterFastDivText'>Smart Street Lighting System</h1>
         </div>
         <div className='FooterScendDiv'>
           <div className='FooterScendLeft'>

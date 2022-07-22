@@ -19,6 +19,9 @@
     background-color: #3fa46a;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.FooterFastDivText{
+    color: rgb(253, 253, 253);
+}
 .FooterScendDiv{
     display: flex;
     flex-direction: row;

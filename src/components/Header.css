@@ -17,6 +17,10 @@ nav {
     font-size: 50px;
     color: rgb(12, 201, 46);
 }
+.headerDivUpImege{
+    height: 75px;
+    margin-left: -40px;
+}
 
 .HeaderLineDiv {
     height: .5px;

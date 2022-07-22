@@ -5,6 +5,7 @@ import System from "../screen/System"
 import About from '../screen/About';
 import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 import { AiOutlineUser } from "react-icons/ai";
+import Logo from '../Image/Logo.png'
 
 
 export default function Header(props) {
@@ -16,9 +17,11 @@ export default function Header(props) {
           <PageHeader
             className="headerPageheader"
             onBack={() => null}
-            title="Smart Street Lighting System"
+            title="Smart Street Light"
             subTitle=""
           />
+            <img src={Logo} className='headerDivUpImege'/>
+
           <Link className='headerButtonLink' to="/Profile">
             <button className='headerButton' >
               <AiOutlineUser className='headerIcon' />

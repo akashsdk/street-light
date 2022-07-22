@@ -1,0 +1,58 @@
+.contactBody{
+    height: auto;
+    width: auto;
+}
+.contactDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+}
+.contactLeftDiv{
+    height: auto;
+    width: auto;
+}
+.contactLeftDivImg{
+    height: 400px;
+    width: 400px;
+}
+.contactRightDiv{
+    height: auto;
+    margin-left: 20px;
+    align-items: center;
+
+}
+.contactInputDiv{
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 20px;
+    border: 1.5px solid rgba(0, 0, 0, 0.05);
+    border-color: rgb(158, 157, 157);
+}
+.contactInput{
+    height: auto;
+    width: 90%;
+    background-color:transparent;
+    border-width: 1px;
+    border-radius: 20px;
+    margin-top: 5px;
+    border: none;
+    outline: none;
+}
+.contactInputMegDiv{
+    height: 100px;
+    border-radius: 20px;
+    margin-top: 20px;
+    border: 1.5px solid rgba(0, 0, 0, 0.05);
+    border-color: rgb(158, 157, 157);
+}
+.contactInputMeg{
+    height: auto;
+    width: 90%;
+    background-color:transparent;
+    border-width: 1px;
+    border-radius: 20px;
+    margin-top: 5px;
+    border: none;
+    outline: none;
+}
