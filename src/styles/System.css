@@ -4,3 +4,6 @@
     flex-direction: column;
     display: flex;
 }
+.SystemDivLine{
+    height: 50px;
+}

@@ -32,6 +32,7 @@ export default function Header(props) {
         <nav>
           <Link className="link-1" to="/">Home</Link>
           <Link className="link-1" to="/System">System</Link>
+          <Link className="link-1" to="/AddLight">Add Light</Link>
           <Link className="link-1" to="/About">About</Link>
           <Link className="link-1" to="/Contact">Contact</Link>
         </nav>
