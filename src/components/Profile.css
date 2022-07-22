@@ -48,3 +48,7 @@
 .profileSubmitH1:hover{
     color: aliceblue;
 }
+.profileDownDiv{
+    height: 50px;
+    width: auto;
+}

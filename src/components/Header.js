@@ -7,7 +7,7 @@ import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 import { AiOutlineUser } from "react-icons/ai";
 
 
-export default function Header() {
+export default function Header(props) {
   
   return (
     <div>
@@ -22,7 +22,7 @@ export default function Header() {
           <Link className='headerButtonLink' to="/Profile">
             <button className='headerButton' >
               <AiOutlineUser className='headerIcon' />
-              <p>Akash</p>
+              <p>{props.name}</p>
             </button>
           </Link>
         </div>

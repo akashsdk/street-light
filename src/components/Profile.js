@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import './Profile.css'
 import Diamond from '../Image/Profile.jpeg'
+import { VscEyeClosed, VscEye } from "react-icons/vsc";
 
-export default function Profile() {
+export default function Profile(props) {
+  const [hide, setHide] = React.useState(false)
   function sayHello() {
     alert('Submited!');
   }
@@ -10,7 +12,7 @@ export default function Profile() {
     <div className="profileDiv">
       <h2 className="profileH2">Name</h2>
       <div className="profileInputDiv">
-        <input type="text" className="profileInput" placeholder="Name" />
+        <input onChange={(e) => props.setName(e.target.value)} type="text" className="profileInput" placeholder="Name" />
       </div>
       <h2 className="profileH2">Username</h2>
       <div className="profileInputDiv">
@@ -18,7 +20,15 @@ export default function Profile() {
       </div>
       <h2 className="profileH2">Password</h2>
       <div className="profileInputDiv">
-        <input type="text" className="profileInput" placeholder="Password" />
+        <input type={hide ? "password" : 'text'} className="profileInput" placeholder="Password" />
+        <a style={{
+          textDecoration: 'none'
+        }} onClick={() => setHide(!hide)}>
+          {
+            hide ? (<VscEyeClosed />) : (<VscEye />)
+          }
+        </a>
+
       </div>
       <h2 className="profileH2">Phone Number</h2>
       <div className="profileInputDiv">
@@ -27,8 +37,7 @@ export default function Profile() {
       <button type="submit" className="profileSubmit" onClick={sayHello}>
         <h1 className="profileSubmitH1">Submit</h1>
       </button>
-      <div>gjhhjhkh</div>
-      <h1>hbjhgjhgS</h1>
+      <div className="profileDownDiv"></div>
     </div>
   )
 }

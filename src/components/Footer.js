@@ -2,6 +2,7 @@ import React from 'react'
 import './Footer.css'
 import Light from '../Image/Street Light.png'
 import LightLeft from '../Image/Street light2.png'
+import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -15,8 +16,13 @@ export default function Footer() {
           <div className='FooterScendLeft'>
             <img src={Light} className="footerImage" />
           </div>
-          <div>
-            <h1>akashtgy vjuhug ghhgh</h1>
+          <div className='FooterScendMidel'>
+            <h2>USEFUL LINKS</h2>
+            <Link className="link-2" to="/">Home</Link>
+            <Link className="link-2" to="/Profile">Profile</Link>
+            <Link className="link-2" to="/System">System</Link>
+            <Link className="link-2" to="/About">About</Link>
+            <Link className="link-2" to="/Contact">Contact</Link>
           </div>
           <div className='FooterScendLeft'>
             <img src={LightLeft} className="footerImage" />

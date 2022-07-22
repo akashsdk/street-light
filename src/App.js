@@ -14,18 +14,19 @@ import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 
 
 function App() {
+  const [name,setName]=React.useState('Akash')
   return (
     <BrowserRouter>
       <div className="App">
 
-        <Header />
+        <Header name={name}/>
 
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/System" element={<System />} />
           <Route path="/About" element={<About />} />
           <Route path="/Contact" element={<Contact />} />
-          <Route path="/Profile" element={<Profile />} />
+          <Route path="/Profile" element={<Profile setName={setName} />} />
         </Routes>
         <Footer />
 

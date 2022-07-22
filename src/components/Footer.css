@@ -23,6 +23,8 @@
     display: flex;
     flex-direction: row;
     margin-top: 20px;
+    justify-content: center;
+    align-items: center;
 }
 .FooterScendLeft{
     height: auto;
@@ -33,4 +35,19 @@
 .footerImage{
     height: 350px;
     width: 200px;
+}
+.FooterScendMidel{
+    flex-direction: column;
+    display: flex;
+}
+.link-2{
+    transition: 0.3s ease;
+    background: #3fa46a;
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+    border-top: 4px solid #3fa46a;
+    border-bottom: 4px solid #3fa46a;
+    padding: 5px ;
+    margin:0 10px;
 }

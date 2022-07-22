@@ -1,4 +1,6 @@
 .SystemBody{
     height: auto;
     width: auto;
+    flex-direction: column;
+    display: flex;
 }
