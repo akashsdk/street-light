@@ -6,7 +6,7 @@ import '../styles/Home.css'
 export default function Home() {
   return (
     <div className='HomePage'>Home
-    
-</div>
+      <div>kdjdh</div>
+    </div>
   )
 }
