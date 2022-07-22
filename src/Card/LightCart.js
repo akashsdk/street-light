@@ -26,7 +26,7 @@ export default function LightCart(props) {
                 </div>
             </div>
             <div style={{
-                backgroundColor: value?'rgb(112, 251, 205)':'red',
+                backgroundColor: value?'rgb(112, 251, 205)':'#f6574c',
             }} className='LightCartDownDiv'>
                 <p className='LightCartDownP' >{value?'Active':'Deactive'}</p>
             </div>
