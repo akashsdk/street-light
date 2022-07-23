@@ -28,20 +28,21 @@
     margin-top: 20px;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 .FooterScendLeft{
     height: auto;
     width: auto;
-    margin-left: 30px;
 
 }
 .footerImage{
     height: 350px;
-    width: 200px;
+    width: 25%;
 }
 .FooterScendMidel{
     flex-direction: column;
     display: flex;
+    margin-top: 20px;
 }
 .link-2{
     background: #3fa46a;

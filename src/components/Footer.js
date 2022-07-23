@@ -3,6 +3,7 @@ import './Footer.css'
 import Light from '../Image/Street Light.png'
 import LightLeft from '../Image/Street light2.png'
 import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
+import { Col, Row } from 'antd';
 
 export default function Footer() {
   return (
@@ -12,12 +13,12 @@ export default function Footer() {
         <div className='FooterFastDiv'>
           <h1 className='FooterFastDivText'>Smart Street Lighting System</h1>
         </div>
-        <div className='FooterScendDiv'>
-          <div className='FooterScendLeft'>
-            <img src={Light} className="footerImage" />
-          </div>
+        <Row justify="center">
+          <img src={Light} className="footerImage" />
           <div className='FooterScendMidel'>
-            <h2>USEFUL LINKS</h2>
+            <h2 style={{
+              color:'white',
+            }}>USEFUL LINKS</h2>
             <Link className="link-2" to="/">Home</Link>
             <Link className="link-2" to="/Profile">Profile</Link>
             <Link className="link-2" to="/System">System</Link>
@@ -25,10 +26,9 @@ export default function Footer() {
             <Link className="link-2" to="/About">About</Link>
             <Link className="link-2" to="/Contact">Contact</Link>
           </div>
-          <div className='FooterScendLeft'>
-            <img src={LightLeft} className="footerImage" />
-          </div>
-        </div>
+          <img src={LightLeft} className="footerImage" />
+
+        </Row>
       </div>
     </div>
   )
