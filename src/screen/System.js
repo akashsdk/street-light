@@ -27,8 +27,8 @@ export default function System() {
         <Option value="1">Dhaka-3</Option>
       </Select>
       <Row justify="center">
-        <LightCart num='122' LDR='ON' Sensor='ON' />
-        <LightCart num='106' LDR='ON' Sensor='ON' />
+        <LightCart num='101' LDR='ON' Sensor='ON' />
+        <LightCart num='' LDR='ON' Sensor='ON' />
         <LightCart num='100' LDR='ON' Sensor='OFF' />
         <LightCart num='102' LDR='OFF' Sensor='OFF' />
       </Row>

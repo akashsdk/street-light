@@ -47,3 +47,16 @@
     border: 1.5px solid rgba(0, 0, 0, 0.05);
     
 }
+.LightCartBodyDiv{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+.LightCartIcon{
+    margin-top: 6px;
+    margin-left: 10px;
+
+}
+.LightCartBodyP{
+    margin-left: 50px;
+}
