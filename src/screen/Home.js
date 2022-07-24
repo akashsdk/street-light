@@ -2,6 +2,7 @@ import React from 'react'
 import '../styles/Home.css'
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
+import Index from '../components/Index';
 
 
 export default function Home() {
@@ -37,6 +38,7 @@ export default function Home() {
           </div>
         </Slide>
       </div>
+      <Index/>
     </div>
   )
 }
