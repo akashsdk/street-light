@@ -2,6 +2,7 @@ import React from 'react'
 import "./Index.css"
 import ImgMani from '../Image/StreetMaintenance.jpeg'
 
+
 export default function Index() {
   return (
     <div className='indexBody'>

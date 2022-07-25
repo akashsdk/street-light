@@ -6,12 +6,33 @@ import light from "../Image/street-2.1.jpg"
 import { FaRegTrashAlt } from "react-icons/fa";
 
 
+import { ExclamationCircleOutlined } from '@ant-design/icons';
+import { Button, Modal, Space } from 'antd';
+
+const { confirm } = Modal;
+const showConfirm = () => {
+    confirm({
+        title: 'Do you Want to delete these items?',
+        icon: <ExclamationCircleOutlined />,
+        content: 'Some descriptions',
+
+        onOk() {
+            console.log('OK');
+        },
+
+        onCancel() {
+            console.log('Cancel');
+        },
+    });
+};
+
 export default function LightCart(props) {
     const [value, setValue] = React.useState()
     return (
         <div className='LightCartBody'>
+            
             <div className='LightCartBodyDiv'>
-                <FaRegTrashAlt className='LightCartIcon' />
+                <FaRegTrashAlt onClick={showConfirm} className='LightCartIcon'  />
                 <p className='LightCartBodyP'>Street Light-{props.num}</p>
                 
             </div>
