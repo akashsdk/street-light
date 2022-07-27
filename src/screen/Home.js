@@ -4,7 +4,6 @@ import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 import Index from '../components/Index';
 
-
 export default function Home() {
   const images = [
     "https://www.agcled.com/static/blog/led-street-light-04.jpg",
