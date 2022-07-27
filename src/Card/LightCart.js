@@ -12,9 +12,9 @@ import { Button, Modal, Space } from 'antd';
 const { confirm } = Modal;
 const showConfirm = () => {
     confirm({
-        title: 'Do you Want to delete these items?',
+        title: 'Do you Want to delete this items?',
         icon: <ExclamationCircleOutlined />,
-        content: 'Some descriptions',
+        content: 'Press "OK"',
 
         onOk() {
             console.log('OK');
@@ -56,6 +56,7 @@ export default function LightCart(props) {
             }} className='LightCartDownDiv'>
                 <p className='LightCartDownP' style={{
                     color: value ? 'black' : 'white',
+
                 }}>{value ? 'Active' : 'Deactive'}</p>
             </div>
         </div>
