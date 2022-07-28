@@ -10,8 +10,8 @@
 .indexImgMani{
     height: 500px;
     border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+    box-shadow: 10px 10px 5px #aaaaaa;
+    margin-top: 50px;
 }
 .indexRowDiv{
     margin-left: 20px;
@@ -20,4 +20,27 @@
     font-size: 20px;
     text-align: justify;
     margin: 15px;
+}
+.indexImgeCircuit{
+    height: 50%;
+    width: 80%;
+    border-radius: 5px;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+.indecLineDive{
+    height: .5px;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 20px;
+    background-color: rgb(75, 71, 71);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.indecNoticeDiv{
+    height: 500px;
+    margin: 2.5%;
+    border: 1.5px solid rgba(0, 0, 0, 0.05);
+    border-color: rgb(2, 162, 60);
+    border-radius: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
