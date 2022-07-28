@@ -3,13 +3,21 @@
     margin-top: 20px;
 }
 .indexFistP{
-    font-size: 30px;
+    font-size: 35px;
     color: #3fa46a;
 }
 
 .indexImgMani{
     height: 500px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 .indexRowDiv{
     margin-left: 20px;
+}
+.indexFistPText{
+    font-size: 20px;
+    text-align: justify;
+    margin: 15px;
 }

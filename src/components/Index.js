@@ -2,7 +2,6 @@ import React from 'react'
 import "./Index.css"
 import ImgMani from '../Image/StreetMaintenance.jpeg'
 
-import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 import { Col, Row } from 'antd';
 
 
@@ -10,14 +9,26 @@ import { Col, Row } from 'antd';
 export default function Index() {
   return (
     <div className='indexBody'>
-      <Row >
-        <div className='indexRowDiv'>
-          <p className='indexFistP'>Street Light Maintenance</p>
+      <Row>
+        <Col span={6} push={15}>
           <img src={ImgMani} className="indexImgMani" />
-        </div>
+
+        </Col>
+        <Col span={15} pull={6}>
+          <div className='indexRowDiv'>
+            <p className='indexFistP'>Street Light Maintenance</p>
+          </div>
+          <p className='indexFistPText'>Street lighting is usually owned by counties or cities and is seen in neighbourhoods. Our Street Lighting Maintenance crews furnish all labour, materials, and equipment and supervise the maintenance of many street lighting systems in our service area. Repairs include but are not limited to the lamp, ballast and photocell repair and replacement; installation of light pole and/or luminaries arms; complete fixture replacement, and cleaning or repair of components. Our crews perform street light installation, street light maintenance and repair of conduit, junction boxes, conduit bores, grounding; installation and repair to concrete foundations; locating, installing, testing, and splicing conductor cables; and modifications to service panels as required.</p>
+
+        </Col>
         
       </Row>
-      
+
+      <div>
+        <p className='indexFistP'>street light circuit design</p>
+      </div>
+
+
 
     </div>
   )
