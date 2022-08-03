@@ -36,6 +36,7 @@ export default function Index() {
         <h5>Notice Board</h5>
         <div className='indecNoticeBox'>
           <p className='indecNoticeText'>upcoming notice</p>
+          <div>fgh</div>
         </div>
         <Pagination defaultCurrent={1} total={50} />
       </div>
