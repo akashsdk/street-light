@@ -3,11 +3,16 @@ import './Profile.css'
 import Diamond from '../Image/Profile.jpeg'
 import { VscEyeClosed, VscEye } from "react-icons/vsc";
 
+import { UploadOutlined } from '@ant-design/icons';
+import { Button, message, Upload } from 'antd';
+
+
 export default function Profile(props) {
   const [hide, setHide] = React.useState(false)
   function sayHello() {
     alert('Submited!');
   }
+  
   return (
     <div className="profileDiv">
       <h2 className="profileH2">Name</h2>
