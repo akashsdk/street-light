@@ -46,6 +46,12 @@ export default function Gallery() {
             status: 'done',
             url: 'https://www.mumbailive.com/images/media/images/images_1582884916758_724488_street_light.jpg?bg=1b120f&crop=1280%2C720%2Cnull%2C0&fit=fill&fitToScale=h%2C1368%2C768&fm=webp&h=768&height=720&w=1368&width=1280',
         },
+        {
+            uid: '4',
+            name: 'image.png',
+            status: 'done',
+            url: 'https://www.mumbailive.com/images/media/images/images_1582884916758_724488_street_light.jpg?bg=1b120f&crop=1280%2C720%2Cnull%2C0&fit=fill&fitToScale=h%2C1368%2C768&fm=webp&h=768&height=720&w=1368&width=1280',
+        },
 
 
     ]);
