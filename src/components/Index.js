@@ -5,7 +5,8 @@ import CircuitDesign from '../Image/CircuitDesign.png'
 
 import { Col, Row, Pagination } from 'antd';
 
-
+import { PlusOutlined } from '@ant-design/icons';
+import { Modal, Upload } from 'antd';
 
 export default function Index() {
   const [page,setPage]=React.useState(1)
@@ -32,6 +33,13 @@ export default function Index() {
         <img src={CircuitDesign} className='indexImgeCircuit' />
       </div>
       <div className='indecLineDive'></div>
+
+      <div className='indecGalleryBox'>
+        bhgfvhbhjg
+      </div>
+
+      <div className='indecLineDive'></div>
+
 
       <div className='indecNoticeDiv'>
         <h5>Notice Board</h5>
