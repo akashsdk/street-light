@@ -63,7 +63,7 @@ export default function Gallery() {
             <PlusOutlined />
             <div
                 style={{
-                    marginTop: 1,
+                    marginTop: 10,
                 }}
             >
                 Upload
