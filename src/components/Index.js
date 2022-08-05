@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Index.css"
 import ImgMani from '../Image/StreetMaintenance.jpeg'
 import CircuitDesign from '../Image/CircuitDesign.png'
+import Gallery from '../Card/Gallery.js'
 
 import { Col, Row, Pagination } from 'antd';
 
-import { PlusOutlined } from '@ant-design/icons';
-import { Modal, Upload } from 'antd';
 
 export default function Index() {
-  const [page,setPage]=React.useState(1)
+  const [page, setPage] = React.useState(1)
+
   return (
     <div className='indexBody'>
       <Row>
@@ -35,7 +35,8 @@ export default function Index() {
       <div className='indecLineDive'></div>
 
       <div className='indecGalleryBox'>
-        bhgfvhbhjg
+
+        <Gallery/>
       </div>
 
       <div className='indecLineDive'></div>
@@ -45,22 +46,22 @@ export default function Index() {
         <h5>Notice Board</h5>
         <div className='indecNoticeBox'>
           {
-            page==1?(
+            page == 1 ? (
               <p className='indecNoticeText'>upcoming notice</p>
-            ):page==2?(
+            ) : page == 2 ? (
               <p className='indecNoticeText'>upcoming notice 2</p>
-            ):page==3?(
+            ) : page == 3 ? (
               <p className='indecNoticeText'>upcoming notice 3</p>
-            ):page==4?(
+            ) : page == 4 ? (
               <p className='indecNoticeText'>upcoming notice 4</p>
-            ):page==5?(
+            ) : page == 5 ? (
               <p className='indecNoticeText'>upcoming notice 5</p>
-            ):(
+            ) : (
               <p className='indecNoticeText'>Error</p>
             )
           }
         </div>
-        <Pagination onChange={(page,pageSize)=>{
+        <Pagination onChange={(page, pageSize) => {
           setPage(page)
         }} defaultCurrent={1} current={page} total={50} />
       </div>
