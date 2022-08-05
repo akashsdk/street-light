@@ -47,15 +47,15 @@ export default function Index() {
         <div className='indecNoticeBox'>
           {
             page == 1 ? (
-              <p className='indecNoticeText'>upcoming notice</p>
+              <p className='indecNoticeText'>this website is under maintenance 🥴</p>
             ) : page == 2 ? (
-              <p className='indecNoticeText'>upcoming notice 2</p>
+              <p className='indecNoticeText'>upcoming notice 1</p>
             ) : page == 3 ? (
-              <p className='indecNoticeText'>upcoming notice 3</p>
+              <p className='indecNoticeText'>upcoming notice 2</p>
             ) : page == 4 ? (
-              <p className='indecNoticeText'>upcoming notice 4</p>
+              <p className='indecNoticeText'>upcoming notice 3</p>
             ) : page == 5 ? (
-              <p className='indecNoticeText'>upcoming notice 5</p>
+              <p className='indecNoticeText'>upcoming notice 4</p>
             ) : (
               <p className='indecNoticeText'>Error</p>
             )
