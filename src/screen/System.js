@@ -1,9 +1,9 @@
 import React from 'react'
 import '../styles/System.css'
 import LightCart from '../Card/LightCart'
-import { Col, Row } from 'antd';
-import { Select } from 'antd';
+import { Col, Row, Select, Button } from 'antd';
 import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 export default function System() {
   const { Option } = Select;
@@ -40,10 +40,13 @@ export default function System() {
               <Option value="1">Dhaka-3</Option>
             </Select>
           </div>
+          <div>
+            <Button type="primary"  className='SystemButton'>
+            <Link to="/AddLight">Add Light</Link>
+            </Button>
+          </div>
         </div>
-      ) : (<div className='SystemButtonDiv'>
-      
-    </div>)}
+      ) : (<></>)}
 
       <div className='SystemDivLine'></div>
       <Row justify="center">

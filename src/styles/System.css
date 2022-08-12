@@ -22,6 +22,19 @@
 .SystemButtonDiv{
     height: 150px;
     margin: 20px;
+    border-radius: 10px;
     background-color: aquamarine;
     animation: 2s ease-out 0s 1 FadeIn;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.SystemButton{
+    background-color: #3fa46a;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 25px;
 }
