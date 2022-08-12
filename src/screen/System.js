@@ -3,19 +3,28 @@ import '../styles/System.css'
 import LightCart from '../Card/LightCart'
 import { Col, Row } from 'antd';
 import { Select } from 'antd';
-import { AiFillCaretDown } from "react-icons/ai";
+import { AiFillCaretDown,AiFillCaretUp } from "react-icons/ai";
 
 export default function System() {
   const { Option } = Select;
+  const [hide,setHide]=React.useState(false)
   return (
     <div>
       <div>
-        <AiFillCaretDown className='SystemIcon' />
+        {hide?(<AiFillCaretDown onClick={()=>{
+          setHide(!hide)
+        }} className='SystemIcon' />):(
+          <AiFillCaretUp onClick={()=>{
+            setHide(!hide)
+          }} className='SystemIcon' />
+        )}
       </div>
-      <div className='SystemButtonDiv'></div>
-      <div>
+      {hide?(
+        <div className='SystemButtonDiv'>
 
-        <div className='SystemDivLine'></div>
+        </div>
+      ):(<></>)}
+      <div>
         <h2>Search to Select Area</h2>
         <Select
           showSearch
@@ -34,6 +43,7 @@ export default function System() {
           <Option value="1">Dhaka-3</Option>
         </Select>
       </div>
+      <div className='SystemDivLine'></div>
       <Row justify="center">
         <LightCart num='101' LDR='ON' Sensor='ON' />
         <LightCart num='' LDR='ON' Sensor='ON' />
