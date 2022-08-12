@@ -10,9 +10,11 @@ export default function System() {
   return (
     <div>
       <div>
-        <div>
-          <AiFillCaretDown className='SystemIcon' />
-        </div>
+        <AiFillCaretDown className='SystemIcon' />
+      </div>
+      <div className='SystemButtonDiv'></div>
+      <div>
+
         <div className='SystemDivLine'></div>
         <h2>Search to Select Area</h2>
         <Select

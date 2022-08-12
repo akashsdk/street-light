@@ -10,3 +10,7 @@
 .SystemIcon{
     font-size: 30px;
 }
+.SystemButtonDiv{
+    height: 50px;
+    background-color: aquamarine;
+}
