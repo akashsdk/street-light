@@ -9,13 +9,41 @@ import About from './screen/About';
 import Contact from './screen/Contact';
 import Profile from './components/Profile';
 import AddLight from './screen/AddLight';
+import LogIn from './components/LogIn';
 import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 //import AnimatedCursor from "react-animated-cursor"
+import app from './firebase'
+import { getAuth,onAuthStateChanged } from "firebase/auth";
 
 
 
 function App() {
   const [name,setName]=React.useState('Akash')
+  const [user,setUser]=React.useState(null)
+  const auth = getAuth(app);
+
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      setUser(user)
+      console.log(user)
+      const uid = user.uid;
+      // ...
+    } else {
+      // User is signed out
+      // ...
+      setUser('ok')
+    }
+  });
+  if(!user){
+    return(
+      <p>Loading..</p>
+    )
+  }
+  if(user=='ok'){
+    return(
+      <LogIn/>
+    )
+  }
   return (
     <BrowserRouter>
       <div className="App">
