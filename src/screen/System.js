@@ -36,8 +36,8 @@ export default function System() {
               }
             >
               <Option value="1">Dhaka-1</Option>
-              <Option value="1">Dhaka-2</Option>
-              <Option value="1">Dhaka-3</Option>
+              <Option value="2">Dhaka-2</Option>
+              <Option value="3">Dhaka-3</Option>
             </Select>
           </div>
           <div>
