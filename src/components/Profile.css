@@ -11,6 +11,10 @@
 .profileH2{
     margin-top: 15px;
 }
+.profileStarIcon{
+    font-size: 8px;
+    color: rgb(242, 53, 53);
+}
 .profileInputDiv{
     height: 40px;
     border-radius: 20px;

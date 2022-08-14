@@ -5,6 +5,7 @@ import { VscEyeClosed, VscEye } from "react-icons/vsc";
 
 import { UploadOutlined } from '@ant-design/icons';
 import { Button, message, Upload } from 'antd';
+import { AiFillStar } from "react-icons/ai";
 
 
 export default function Profile(props) {
@@ -19,11 +20,11 @@ export default function Profile(props) {
       <div className="profileInputDiv">
         <input onChange={(e) => props.setName(e.target.value)} type="text" className="profileInput" placeholder="Name" />
       </div>
-      <h2 className="profileH2">User ID</h2>
+      <h2 className="profileH2">User ID <AiFillStar className="profileStarIcon"/>  </h2>
       <div className="profileInputDiv">
         <input type="text" className="profileInput" placeholder="UserID" />
       </div>
-      <h2 className="profileH2">Password</h2>
+      <h2 className="profileH2">Password <AiFillStar className="profileStarIcon"/></h2>
       <div className="profileInputDiv">
         <input type={hide ? "password" : 'text'} className="profileInput" placeholder="Password" />
         <a style={{
