@@ -19,9 +19,9 @@ export default function Profile(props) {
       <div className="profileInputDiv">
         <input onChange={(e) => props.setName(e.target.value)} type="text" className="profileInput" placeholder="Name" />
       </div>
-      <h2 className="profileH2">Username</h2>
+      <h2 className="profileH2">User ID</h2>
       <div className="profileInputDiv">
-        <input type="text" className="profileInput" placeholder="Username" />
+        <input type="text" className="profileInput" placeholder="UserID" />
       </div>
       <h2 className="profileH2">Password</h2>
       <div className="profileInputDiv">
