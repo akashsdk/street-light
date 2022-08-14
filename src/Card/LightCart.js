@@ -4,13 +4,21 @@ import CardLight from '../Image/CardLight.png'
 import Switch from "react-switch";
 import light from "../Image/street-2.1.jpg"
 import { FaRegTrashAlt } from "react-icons/fa";
+import { doc, deleteDoc } from "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
+import app from '../firebase';
+
 
 
 import { ExclamationCircleOutlined } from '@ant-design/icons';
 import { Button, Modal, Space } from 'antd';
 
-const { confirm } = Modal;
-const showConfirm = () => {
+export default function LightCart(props) {
+    const [value, setValue] = React.useState()
+    const db = getFirestore(app);
+
+    const { confirm } = Modal;
+   const showConfirm = (id) => {
     confirm({
         title: 'Do you Want to delete this items?',
         icon: <ExclamationCircleOutlined />,
@@ -18,6 +26,8 @@ const showConfirm = () => {
 
         onOk() {
             console.log('OK');
+            deleteDoc(doc(db, "lights",id ));
+            props.refresh(id)
         },
 
         onCancel() {
@@ -26,13 +36,11 @@ const showConfirm = () => {
     });
 };
 
-export default function LightCart(props) {
-    const [value, setValue] = React.useState()
     return (
         <div className='LightCartBody'>
             
             <div className='LightCartBodyDiv'>
-                <FaRegTrashAlt onClick={showConfirm} className='LightCartIcon'  />
+                <FaRegTrashAlt onClick={()=>showConfirm(props.num)} className='LightCartIcon'  />
                 <p className='LightCartBodyP'>Street Light-{props.num}</p>
                 
             </div>

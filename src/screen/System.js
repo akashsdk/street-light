@@ -4,10 +4,30 @@ import LightCart from '../Card/LightCart'
 import { Col, Row, Select, Button } from 'antd';
 import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { getFirestore } from "firebase/firestore";
+import app from '../firebase';
+import { collection, addDoc,getDocs } from "firebase/firestore";
 
 export default function System() {
+  const db = getFirestore(app);
   const { Option } = Select;
   const [hide, setHide] = React.useState(false)
+  const [data,setData]=React.useState()
+  const [store,setStore]=React.useState()
+  const [load,setLoad]=React.useState()
+
+  const newData=async()=>{
+    const querySnapshot = await getDocs(collection(db, "lights"));
+    let arr=[]
+    querySnapshot.forEach((doc) => {
+      arr.push(doc.data())
+    });
+    setData(arr)
+    setStore(arr)
+  }
+  React.useEffect(()=>{
+    newData()
+  },[load])
   return (
     <div>
       <div>
@@ -23,7 +43,18 @@ export default function System() {
         <div className='SystemButtonDiv'>
           <div>
             <h2>Search to Select Area</h2>
-            <Select
+            <Select onChange={e=>{
+              if(e=='All'){
+                setData(store)
+                return
+              }
+              if(!store){
+                newData()
+                return
+              }
+              let arr=store.filter(d=>d.area==e)
+              setData(arr)
+            }}
               showSearch
               style={{
                 width: 200,
@@ -35,9 +66,10 @@ export default function System() {
                 optionA.children.toLowerCase().localeCompare(optionB.children.toLowerCase())
               }
             >
-              <Option value="1">Dhaka-1</Option>
-              <Option value="2">Dhaka-2</Option>
-              <Option value="3">Dhaka-3</Option>
+              <Option value="Dhaka-1">Dhaka-1</Option>
+              <Option value="Dhaka-2">Dhaka-2</Option>
+              <Option value="Dhaka-3">Dhaka-3</Option>
+              <Option value="All">All-Area</Option>
             </Select>
           </div>
           <div>
@@ -50,10 +82,14 @@ export default function System() {
 
       <div className='SystemDivLine'></div>
       <Row justify="center">
-        <LightCart num='101' LDR='ON' Sensor='ON' />
-        <LightCart num='' LDR='ON' Sensor='ON' />
-        <LightCart num='100' LDR='ON' Sensor='OFF' />
-        <LightCart num='102' LDR='OFF' Sensor='OFF' />
+        {
+          data?(
+            data.map((d,i)=>(
+              <LightCart refresh={setLoad} key={i} num={d.number} LDR={d.ldr?'ON':'OFF'} Sensor={d.sensor?'ON':'OFF'} />
+            ))
+          ):(<></>)
+        }
+        
       </Row>
     </div>
   )
