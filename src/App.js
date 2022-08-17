@@ -23,18 +23,21 @@ function App() {
   const [user,setUser]=React.useState(null)
   const auth = getAuth(app);
 
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      setUser(user)
-      console.log(user)
-      const uid = user.uid;
-      // ...
-    } else {
-      // User is signed out
-      // ...
-      setUser('ok')
-    }
-  });
+  React.useEffect(()=>{
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUser(user)
+        console.log(user)
+        const uid = user.uid;
+        // ...
+      } else {
+        // User is signed out
+        // ...
+        setUser('ok')
+      }
+    });
+  },[])
+  
   if(!user){
     return(
       <p>Loading..</p>

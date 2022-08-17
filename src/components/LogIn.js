@@ -4,9 +4,7 @@ import "./LogIn.css"
 import app from '../firebase'
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
-
 import { ExclamationCircleOutlined } from '@ant-design/icons';
-
 const { confirm } = Modal;
 const showConfirm = (msg) => {
     confirm({
@@ -25,43 +23,51 @@ const showConfirm = (msg) => {
 };
 
 export default function LogIn() {
-    const [email,setEmail]=React.useState()
-    const [password,setPassword]=React.useState()
-    const auth=getAuth(app)
+    const [email, setEmail] = React.useState()
+    const [password, setPassword] = React.useState()
+    const auth = getAuth(app)
 
-    const login=()=>{
+    const login = () => {
         signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            // Signed in 
-            const user = userCredential.user;
-            // ...
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            console.log(errorMessage)
-            showConfirm(errorCode)
-        });
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                // ...
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.log(errorMessage)
+                showConfirm(errorCode)
+            });
     }
 
 
-    
+
     return (
         <div>
-            <h1>Log In</h1>
-            <h3>
-                user ID: "someone@gmail.com", {"\n"} 
-                Password: "123456"
-            </h3>
             <div>
-                <Input onChange={(e)=>{
-                    setEmail(e.target.value)
-                }} className='logInInput' placeholder="UserID" />
-                <Input onChange={(e)=>{
-                    setPassword(e.target.value)
-                }} className='logInInput' placeholder="Password" />
+                <div>
 
-                <Button onClick={login} type="primary">Log In</Button>
+                </div>
+            </div>
+            
+            <div>
+                <h1>Log In</h1>
+                <h3>
+                    user ID: "someone@gmail.com", {"\n"}
+                    Password: "123456"
+                </h3>
+                <div>
+                    <Input onChange={(e) => {
+                        setEmail(e.target.value)
+                    }} className='logInInput' placeholder="UserID" />
+                    <Input onChange={(e) => {
+                        setPassword(e.target.value)
+                    }} className='logInInput' placeholder="Password" />
+
+                    <Button onClick={login} type="primary">Log In</Button>
+                </div>
             </div>
         </div>
     )
