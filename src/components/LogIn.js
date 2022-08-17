@@ -5,6 +5,8 @@ import app from '../firebase'
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 import { ExclamationCircleOutlined } from '@ant-design/icons';
+import MovingText from 'react-moving-text'
+
 const { confirm } = Modal;
 const showConfirm = (msg) => {
     confirm({
@@ -48,7 +50,7 @@ export default function LogIn() {
         <div>
             <div>
                 <div>
-
+                
                 </div>
             </div>
             
