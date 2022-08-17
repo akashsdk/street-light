@@ -15,6 +15,7 @@ export default function Profile(props) {
   function sayHello() {
     alert('Submited!');
   }
+  
 const logout=()=>{
   signOut(auth).then(() => {
     // Sign-out successful.

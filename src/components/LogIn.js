@@ -43,9 +43,16 @@ export default function LogIn() {
             showConfirm(errorCode)
         });
     }
+
+
+    
     return (
         <div>
             <h1>Log In</h1>
+            <h3>
+                user ID: "someone@gmail.com", {"\n"} 
+                Password: "123456"
+            </h3>
             <div>
                 <Input onChange={(e)=>{
                     setEmail(e.target.value)
@@ -54,7 +61,7 @@ export default function LogIn() {
                     setPassword(e.target.value)
                 }} className='logInInput' placeholder="Password" />
 
-                <Button onClick={login} type="primary">Primary Button</Button>
+                <Button onClick={login} type="primary">Log In</Button>
             </div>
         </div>
     )
