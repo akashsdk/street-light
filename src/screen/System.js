@@ -6,28 +6,28 @@ import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { getFirestore } from "firebase/firestore";
 import app from '../firebase';
-import { collection, addDoc,getDocs } from "firebase/firestore";
+import { collection, addDoc, getDocs } from "firebase/firestore";
 
 export default function System() {
   const db = getFirestore(app);
   const { Option } = Select;
   const [hide, setHide] = React.useState(false)
-  const [data,setData]=React.useState()
-  const [store,setStore]=React.useState()
-  const [load,setLoad]=React.useState()
+  const [data, setData] = React.useState()
+  const [store, setStore] = React.useState()
+  const [load, setLoad] = React.useState()
 
-  const newData=async()=>{
+  const newData = async () => {
     const querySnapshot = await getDocs(collection(db, "lights"));
-    let arr=[]
+    let arr = []
     querySnapshot.forEach((doc) => {
       arr.push(doc.data())
     });
     setData(arr)
     setStore(arr)
   }
-  React.useEffect(()=>{
+  React.useEffect(() => {
     newData()
-  },[load])
+  }, [load])
   return (
     <div>
       <div>
@@ -43,16 +43,16 @@ export default function System() {
         <div className='SystemButtonDiv'>
           <div>
             <h2>Search to Select Area</h2>
-            <Select onChange={e=>{
-              if(e=='All'){
+            <Select onChange={e => {
+              if (e == 'All') {
                 setData(store)
                 return
               }
-              if(!store){
+              if (!store) {
                 newData()
                 return
               }
-              let arr=store.filter(d=>d.area==e)
+              let arr = store.filter(d => d.area == e)
               setData(arr)
             }}
               showSearch
@@ -73,8 +73,8 @@ export default function System() {
             </Select>
           </div>
           <div>
-            <Button type="primary"  className='SystemButton'>
-            <Link to="/AddLight">Add Light</Link>
+            <Button type="primary" className='SystemButton'>
+              <Link to="/AddLight">Add Light</Link>
             </Button>
           </div>
         </div>
@@ -83,13 +83,13 @@ export default function System() {
       <div className='SystemDivLine'></div>
       <Row justify="center">
         {
-          data?(
-            data.map((d,i)=>(
-              <LightCart refresh={setLoad} key={i} num={d.number} LDR={d.ldr?'ON':'OFF'} Sensor={d.sensor?'ON':'OFF'} />
+          data ? (
+            data.map((d, i) => (
+              <LightCart refresh={setLoad} key={i} num={d.number} LDR={d.ldr ? 'ON' : 'OFF'} Sensor={d.sensor ? 'ON' : 'OFF'} />
             ))
-          ):(<></>)
+          ) : (<></>)
         }
-        
+
       </Row>
     </div>
   )

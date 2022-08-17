@@ -10,6 +10,7 @@ import Contact from './screen/Contact';
 import Profile from './components/Profile';
 import AddLight from './screen/AddLight';
 import LogIn from './components/LogIn';
+import ChangePassword from './components/ChangePassword';
 import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 //import AnimatedCursor from "react-animated-cursor"
 import app from './firebase'
@@ -57,6 +58,7 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Profile" element={<Profile setName={setName} />} />
+          <Route path="/ChangePassword" element={<ChangePassword />} />
         </Routes>
         <Footer />
 

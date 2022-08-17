@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import './Profile.css'
 import Diamond from '../Image/Profile.jpeg'
 import { VscEyeClosed, VscEye } from "react-icons/vsc";
+import { Link } from "react-router-dom";
 
 import { UploadOutlined } from '@ant-design/icons';
 import { Button, message, Upload } from 'antd';
@@ -15,7 +16,7 @@ export default function Profile(props) {
   function sayHello() {
     alert('Submited!');
   }
-  
+
 const logout=()=>{
   signOut(auth).then(() => {
     // Sign-out successful.
@@ -55,7 +56,8 @@ const logout=()=>{
       </button>
       <div>
         <Button type="link" className="profileForgetButton" danger>
-          Change Password
+          
+          <Link to="/ChangePassword">Change Password</Link>
         </Button>
         <Button onClick={logout} type="link" className="profileForgetButton" danger>
           Log out
