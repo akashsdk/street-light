@@ -8,9 +8,13 @@ import { Button } from 'antd';
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
 export default function ChangePassword() {
-    const [hide0, setHide0] = React.useState(false);
-    const [hide1, setHide1] = React.useState(false);
-    const [hide2, setHide2] = React.useState(false);
+    const [hide0, setHide0] = React.useState(true);
+    const [hide1, setHide1] = React.useState(true);
+    const [hide2, setHide2] = React.useState(true);
+
+    function sayHello() {
+        alert('Submited!');
+    }
     return (
         <div>
             <div className='ChangeBox'>
@@ -20,7 +24,7 @@ export default function ChangePassword() {
                     <input type={hide0 ? "password" : 'text'} className="changeInput" placeholder="Old Password" />
                     <a style={{
                         textDecoration: 'none'
-                    }} onClick={() => setHide0 (!hide0)}>
+                    }} onClick={() => setHide0(!hide0)}>
                         {
                             hide0 ? (<VscEyeClosed />) : (<VscEye />)
                         }
@@ -32,7 +36,7 @@ export default function ChangePassword() {
                     <input type={hide1 ? "password" : 'text'} className="changeInput" placeholder="New Password" />
                     <a style={{
                         textDecoration: 'none'
-                    }} onClick={() => setHide1 (!hide1)}>
+                    }} onClick={() => setHide1(!hide1)}>
                         {
                             hide1 ? (<VscEyeClosed />) : (<VscEye />)
                         }
@@ -44,19 +48,18 @@ export default function ChangePassword() {
                     <input type={hide2 ? "password" : 'text'} className="changeInput" placeholder="Confirm Password" />
                     <a style={{
                         textDecoration: 'none'
-                    }} onClick={() => setHide2 (!hide2)}>
+                    }} onClick={() => setHide2(!hide2)}>
                         {
                             hide2 ? (<VscEyeClosed />) : (<VscEye />)
                         }
                     </a>
                 </div>
 
-                <button type="submit" className="chanheSubmit" >
+                <button type="submit" className="chanheSubmit" onClick={sayHello}>
                     <h1 className="chanheSubmitH1">Submit</h1>
                 </button>
                 <div>
-                    <Button type="link" className="chanheForgetBack" danger>
-
+                    <Button type="link" className="chanheForgetBack"  danger>
                         <Link to="/Profile">
                             <AiOutlineArrowLeft /> Back
                         </Link>
