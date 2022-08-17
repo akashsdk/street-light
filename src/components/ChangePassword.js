@@ -8,59 +8,61 @@ import { Button } from 'antd';
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
 export default function ChangePassword() {
-    const [hide, setHide] = React.useState(false)
+    const [hide0, setHide0] = React.useState(false);
+    const [hide1, setHide1] = React.useState(false);
+    const [hide2, setHide2] = React.useState(false);
     return (
         <div>
             <div className='ChangeBox'>
 
-                <h2 className="changeh2">Old Password <AiFillStar className="profileStarIcon" /></h2>
+                <h2 className="changeh2">Old Password <AiFillStar className="changeStarIcon" /></h2>
                 <div className="changeInputDiv">
-                    <input type={hide ? "password" : 'text'} className="changeInput" placeholder="Old Password" />
+                    <input type={hide0 ? "password" : 'text'} className="changeInput" placeholder="Old Password" />
                     <a style={{
                         textDecoration: 'none'
-                    }} onClick={() => setHide(!hide)}>
+                    }} onClick={() => setHide0 (!hide0)}>
                         {
-                            hide ? (<VscEyeClosed />) : (<VscEye />)
+                            hide0 ? (<VscEyeClosed />) : (<VscEye />)
                         }
                     </a>
                 </div>
 
-                <h2 className="changeh2">New Password <AiFillStar className="profileStarIcon" /></h2>
+                <h2 className="changeh2">New Password <AiFillStar className="changeStarIcon" /></h2>
                 <div className="changeInputDiv">
-                    <input type={hide ? "password" : 'text'} className="changeInput" placeholder="New Password" />
+                    <input type={hide1 ? "password" : 'text'} className="changeInput" placeholder="New Password" />
                     <a style={{
                         textDecoration: 'none'
-                    }} onClick={() => setHide(!hide)}>
+                    }} onClick={() => setHide1 (!hide1)}>
                         {
-                            hide ? (<VscEyeClosed />) : (<VscEye />)
+                            hide1 ? (<VscEyeClosed />) : (<VscEye />)
                         }
                     </a>
                 </div>
 
-                <h2 className="changeh2"> Confirm Password <AiFillStar className="profileStarIcon" /></h2>
+                <h2 className="changeh2"> Confirm Password <AiFillStar className="changeStarIcon" /></h2>
                 <div className="changeInputDiv">
-                    <input type={hide ? "password" : 'text'} className="changeInput" placeholder="Confirm Password" />
+                    <input type={hide2 ? "password" : 'text'} className="changeInput" placeholder="Confirm Password" />
                     <a style={{
                         textDecoration: 'none'
-                    }} onClick={() => setHide(!hide)}>
+                    }} onClick={() => setHide2 (!hide2)}>
                         {
-                            hide ? (<VscEyeClosed />) : (<VscEye />)
+                            hide2 ? (<VscEyeClosed />) : (<VscEye />)
                         }
                     </a>
                 </div>
 
-                <button type="submit" className="profileSubmit" >
-                    <h1 className="profileSubmitH1">Submit</h1>
+                <button type="submit" className="chanheSubmit" >
+                    <h1 className="chanheSubmitH1">Submit</h1>
                 </button>
                 <div>
-                    <Button type="link" className="profileForgetButton" danger>
+                    <Button type="link" className="chanheForgetBack" danger>
 
                         <Link to="/Profile">
                             <AiOutlineArrowLeft /> Back
                         </Link>
                     </Button>
                 </div>
-                <div className="profileDownDiv"></div>
+                <div className="chanheDownDiv"></div>
             </div>
         </div>
     )
