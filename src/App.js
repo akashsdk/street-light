@@ -11,6 +11,7 @@ import Profile from './components/Profile';
 import AddLight from './screen/AddLight';
 import LogIn from './components/LogIn';
 import ChangePassword from './components/ChangePassword';
+import Loading from './Card/Loading';
 import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 //import AnimatedCursor from "react-animated-cursor"
 import app from './firebase'
@@ -20,6 +21,7 @@ import { getAuth,onAuthStateChanged } from "firebase/auth";
 
 function App() {
   const [name,setName]=React.useState('Akash')
+  const [userName,setEmail]=React.useState('User Id')
   const [user,setUser]=React.useState(null)
   const auth = getAuth(app);
 
@@ -40,12 +42,13 @@ function App() {
   
   if(!user){
     return(
-      <p>Loading..</p>
+      <Loading />
     )
   }
+
   if(user=='ok'){
     return(
-      <LogIn/>
+      <LogIn setName={setEmail}/>
     )
   }
   return (
@@ -60,8 +63,9 @@ function App() {
           <Route path="/AddLight" element={<AddLight />} />
           <Route path="/About" element={<About />} />
           <Route path="/Contact" element={<Contact />} />
-          <Route path="/Profile" element={<Profile setName={setName} />} />
-          <Route path="/ChangePassword" element={<ChangePassword />} />
+          <Route path="/Profile" element={<Profile setName={setName} name2={userName}/>} />
+          <Route path="/ChangePassword" element={<ChangePassword  />} />
+          <Route path='/Loading' element={<Loading />}  />
         </Routes>
         <Footer />
 

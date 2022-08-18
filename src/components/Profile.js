@@ -17,14 +17,14 @@ export default function Profile(props) {
     alert('Submited!');
   }
 
-const logout=()=>{
-  signOut(auth).then(() => {
-    // Sign-out successful.
-    window.location.reload()
-  }).catch((error) => {
-    // An error happened.
-  });
-}
+  const logout = () => {
+    signOut(auth).then(() => {
+      // Sign-out successful.
+      window.location.reload()
+    }).catch((error) => {
+      // An error happened.
+    });
+  }
   return (
     <div className="profileDiv">
       <h2 className="profileH2">Name</h2>
@@ -33,7 +33,7 @@ const logout=()=>{
       </div>
       <h2 className="profileH2">User ID <AiFillStar className="profileStarIcon" />  </h2>
       <div className="profileInputDiv">
-        <input type="text" className="profileInput" placeholder="UserID" />
+        <input type="text" className="profileInput" placeholder={props.name2} />
       </div>
       <h2 className="profileH2">Password <AiFillStar className="profileStarIcon" /></h2>
       <div className="profileInputDiv">
@@ -56,7 +56,7 @@ const logout=()=>{
       </button>
       <div>
         <Button type="link" className="profileForgetButton" danger>
-          
+
           <Link to="/ChangePassword">Change Password</Link>
         </Button>
         <Button onClick={logout} type="link" className="profileForgetButton" danger>

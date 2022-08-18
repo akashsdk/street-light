@@ -28,8 +28,8 @@ const showConfirm = (msg) => {
     });
 };
 
-export default function LogIn() {
-    const [hide, setHide] = React.useState(false);
+export default function LogIn(props) {
+    const [hide, setHide] = React.useState(true);
 
     const [email, setEmail] = React.useState()
     const [password, setPassword] = React.useState()
@@ -73,7 +73,6 @@ export default function LogIn() {
                     }} type='text' className="logInInput"
                         placeholder="User ID" />
                 </div>
-
 
                 <h2 className="changeh2">Password <AiFillStar className="changeStarIcon" /></h2>
                 <div className="changeInputDiv">

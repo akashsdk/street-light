@@ -1,0 +1,19 @@
+.loadingBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20%;
+}
+.loadingText{
+    color: #3fa46a;
+}
+.loadingImg{
+    height: 150px;
+    width: 150px;
+}
+.loadingDiv{
+    position: absolute;
+    margin-left: 10px;
+    margin-top: -40px;
+}
