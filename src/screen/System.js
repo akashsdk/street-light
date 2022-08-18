@@ -30,14 +30,17 @@ export default function System() {
   }, [load])
   return (
     <div>
-      <div>
-        {hide ? (<AiFillCaretDown onClick={() => {
-          setHide(!hide)
-        }} className='SystemIcon' />) : (
-          <AiFillCaretUp onClick={() => {
+      <div className='SystemFilter'> 
+        <h2 >Filter :</h2>
+        <div>
+          {hide ? (<AiFillCaretDown onClick={() => {
             setHide(!hide)
-          }} className='SystemIcon' />
-        )}
+          }} className='SystemIcon' />) : (
+            <AiFillCaretUp onClick={() => {
+              setHide(!hide)
+            }} className='SystemIcon' />
+          )}
+        </div>
       </div>
       {hide ? (
         <div className='SystemButtonDiv'>
