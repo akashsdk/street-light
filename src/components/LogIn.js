@@ -53,14 +53,14 @@ export default function LogIn(props) {
 
 
 
-    
+
     return (
         <div className='LogINBody'>
 
-<Fade right cascade>
-          React Reveal
-        </Fade>
-            
+            <Fade right cascade>
+                React Reveal
+            </Fade>
+
             <div>
                 <h1>Log In</h1>
                 <h3>
