@@ -8,8 +8,8 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { ExclamationCircleOutlined } from '@ant-design/icons';
 import { VscEyeClosed, VscEye } from "react-icons/vsc";
 import { AiFillStar } from "react-icons/ai";
-import { Link } from "react-router-dom";
-import MovingText from 'react-moving-text'
+
+import Fade from 'react-reveal/Fade';
 
 const { confirm } = Modal;
 const showConfirm = (msg) => {
@@ -52,9 +52,15 @@ export default function LogIn(props) {
 
 
 
+
+    
     return (
         <div className='LogINBody'>
 
+<Fade right cascade>
+          React Reveal
+        </Fade>
+            
             <div>
                 <h1>Log In</h1>
                 <h3>
