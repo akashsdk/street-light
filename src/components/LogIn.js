@@ -56,18 +56,8 @@ export default function LogIn(props) {
 
     return (
         <div className='LogINBody'>
-
-            <Fade right cascade>
-                React Reveal
-            </Fade>
-
             <div>
-                <h1>Log In</h1>
-                <h3>
-                    user ID: "someone@gmail.com", {"\n"}
-                    Password: "123456"
-                </h3>
-
+                hghgh
             </div>
 
             <div className='LogInBox'>
@@ -102,6 +92,18 @@ export default function LogIn(props) {
                 <div className="chanheDownDiv"></div>
             </div>
 
+            <Fade right cascade>
+                React Reveal
+            </Fade>
+
+            <div>
+                <h1>Log In</h1>
+                <h3>
+                    user ID: "someone@gmail.com", {"\n"}
+                    Password: "123456"
+                </h3>
+
+            </div>
 
         </div>
     )
