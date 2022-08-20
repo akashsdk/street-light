@@ -10,6 +10,7 @@ import { VscEyeClosed, VscEye } from "react-icons/vsc";
 import { AiFillStar } from "react-icons/ai";
 
 import Fade from 'react-reveal/Fade';
+import TextAnimation from "react-text-animations";
 import Logo1 from '../Image/Logo.png'
 
 const { confirm } = Modal;
@@ -57,9 +58,19 @@ export default function LogIn(props) {
 
     return (
         <div className='LogINBody'>
-            
+
             <div className='LogINfontDiv'>
-                <img src={Logo1} className='LogINlogo'/>
+                <img src={Logo1} className='LogINlogo' />
+                <div className='LogINtextDiv'>
+                    <h1>Smart</h1>
+                    <h1 className='LogINtext'> 
+                        <TextAnimation.Slide target="Street"
+                            text={['Street', 'Street', 'Street']}>
+                            Street
+                        </TextAnimation.Slide>
+                    </h1>
+                    <h1>Light</h1>
+                </div>
             </div>
 
             <div className='LogInBox'>
@@ -94,17 +105,12 @@ export default function LogIn(props) {
                 <div className="chanheDownDiv"></div>
             </div>
 
-            <Fade right cascade>
-                React Reveal
-            </Fade>
-
+            
             <div>
-                <h1>Log In</h1>
                 <h3>
                     user ID: "someone@gmail.com", {"\n"}
                     Password: "123456"
                 </h3>
-
             </div>
 
         </div>
