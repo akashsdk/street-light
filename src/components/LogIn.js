@@ -10,6 +10,7 @@ import { VscEyeClosed, VscEye } from "react-icons/vsc";
 import { AiFillStar } from "react-icons/ai";
 
 import Fade from 'react-reveal/Fade';
+import Logo1 from '../Image/Logo.png'
 
 const { confirm } = Modal;
 const showConfirm = (msg) => {
@@ -56,8 +57,9 @@ export default function LogIn(props) {
 
     return (
         <div className='LogINBody'>
-            <div>
-                hghgh
+            
+            <div className='LogINfontDiv'>
+                <img src={Logo1} className='LogINlogo'/>
             </div>
 
             <div className='LogInBox'>
