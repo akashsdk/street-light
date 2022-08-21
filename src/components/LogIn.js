@@ -12,6 +12,7 @@ import { AiFillStar } from "react-icons/ai";
 import Fade from 'react-reveal/Fade';
 import TextAnimation from "react-text-animations";
 import Logo1 from '../Image/Logo.png'
+import { BsHeadset } from "react-icons/bs";
 
 const { confirm } = Modal;
 const showConfirm = (msg) => {
@@ -63,7 +64,7 @@ export default function LogIn(props) {
                 <img src={Logo1} className='LogINlogo' />
                 <div className='LogINtextDiv'>
                     <h1>Smart</h1>
-                    <h1 className='LogINtext'> 
+                    <h1 className='LogINtext'>
                         <TextAnimation.Slide target="Street"
                             text={['Street', 'Street', 'Street']}>
                             Street
@@ -74,38 +75,46 @@ export default function LogIn(props) {
             </div>
 
             <div className='LogInBox'>
+                <div className='LogINdivBox'>
 
-                <h2 className="changeh2">User ID <AiFillStar className="changeStarIcon" /></h2>
-                <div className="changeInputDiv">
-                    <input onChange={(e) => {
-                        setEmail(e.target.value)
-                    }} type='text' className="logInInput"
-                        placeholder="User ID" />
+                    <h2 className="changeh2">User ID <AiFillStar className="changeStarIcon" /></h2>
+                    <div className="changeInputDiv">
+                        <input onChange={(e) => {
+                            setEmail(e.target.value)
+                        }} type='text' className="logInInput"
+                            placeholder="User ID" />
+                    </div>
                 </div>
-
-                <h2 className="changeh2">Password <AiFillStar className="changeStarIcon" /></h2>
-                <div className="changeInputDiv">
-                    <input onChange={(e) => {
-                        setPassword(e.target.value)
-                    }} type={hide ? "password" : 'text'}
-                        className="logInInput" placeholder="Password" />
-                    <a style={{
-                        textDecoration: 'none'
-                    }} onClick={() => setHide(!hide)}>
-                        {
-                            hide ? (<VscEyeClosed />) : (<VscEye />)
-                        }
-                    </a>
+                <div>
+                    <h2 className="changeh2">Password <AiFillStar className="changeStarIcon" /></h2>
+                    <div className="changeInputDiv">
+                        <input onChange={(e) => {
+                            setPassword(e.target.value)
+                        }} type={hide ? "password" : 'text'}
+                            className="logInInput" placeholder="Password" />
+                        <a style={{
+                            textDecoration: 'none'
+                        }} onClick={() => setHide(!hide)}>
+                            {
+                                hide ? (<VscEyeClosed />) : (<VscEye />)
+                            }
+                        </a>
+                    </div>
                 </div>
+                <div>
+                    <button onClick={login} type="submit" className="chanheSubmit" >
+                        <h1 className="chanheSubmitH1">Log In</h1>
+                    </button>
 
-                <button onClick={login} type="submit" className="chanheSubmit" >
-                    <h1 className="chanheSubmitH1">Log In</h1>
-                </button>
+                    <div>
+                        Castomar Care
+                        <BsHeadset />
+                    </div>
 
-                <div className="chanheDownDiv"></div>
+                    <div className="chanheDownDiv"></div>
+                </div>
             </div>
 
-            
             <div>
                 <h3>
                     user ID: "someone@gmail.com", {"\n"}

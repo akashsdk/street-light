@@ -56,7 +56,6 @@ function App() {
       <div className="App">
 
         <Header name={name}/>
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/System" element={<System />} />
