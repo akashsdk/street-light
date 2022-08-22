@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Input, Button, Modal, Col, DatePicker, Drawer, Form, Row, Select, Space } from 'antd';
+import { Input, Button, Modal, Col, DatePicker, Drawer, 
+    Form, Row, Select, Space, message, } from 'antd';
 import "./LogIn.css";
 import './ChangePassword.css'
 import app from '../firebase'
@@ -63,11 +64,20 @@ export default function LogIn(props) {
 
     const showDrawer = () => {
         setVisible(true);
+        
     };
 
     const onClose = () => {
         setVisible(false);
+        message.error('Cancel');
     };
+
+    
+
+
+    const [number, setNumber] = React.useState()
+    const [area, setArea] = React.useState()
+    
 
 
     return (
@@ -119,9 +129,9 @@ export default function LogIn(props) {
                         <h1 className="chanheSubmitH1">Log In</h1>
                     </button>
 
-                    <Button type="primary" onClick={showDrawer} icon={<PlusOutlined />}>
-                        New account<BsHeadset />
-                    </Button>
+                    <button className='logINLastbutton' onClick={showDrawer}>
+                        Help Line <BsHeadset className='logINlastIcon'/>
+                    </button>
 
                     <div className="chanheDownDiv"></div>
                 </div>
@@ -191,6 +201,7 @@ export default function LogIn(props) {
                                 <Form.Item
                                     name="phone"
                                     label="Phone No:"
+                                    type="number"
                                     rules={[
                                         {
                                             required: true,
@@ -215,7 +226,8 @@ export default function LogIn(props) {
                                         },
                                     ]}
                                 >
-                                    <Input placeholder="Please enter acctive email" />
+                                    <Input placeholder="Please enter acctive email" 
+                                    onChange={e => setNumber(e.target.value)}/>
                                 </Form.Item>
                             </Col>
 
@@ -232,7 +244,11 @@ export default function LogIn(props) {
                                         },
                                     ]}
                                 >
-                                    <Select placeholder="Please choose the problem type">
+                                    <Select
+                                    onChange={(e) => {
+                                        setArea(e)
+                                        console.log(e) }}
+                                         placeholder="Please choose the problem type">
                                         <Option value="private">Forgot Password</Option>
                                         <Option value="public">Forgot UserID</Option>
                                         <Option value="privateandpublic">Forgot UserID And Passwoed</Option>

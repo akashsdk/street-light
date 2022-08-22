@@ -74,8 +74,7 @@ export default function AddLight() {
                 </Form.Item>
                 <Form.Item
                     noStyle
-                    shouldUpdate={(prevValues, currentValues) => prevValues.gender !== currentValues.gender}
-                >
+                    shouldUpdate={(prevValues, currentValues) => prevValues.gender !== currentValues.gender}>
                     {({ getFieldValue }) =>
                         getFieldValue('gender') === 'other' ? (
                             <Form.Item
