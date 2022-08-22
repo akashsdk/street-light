@@ -30,7 +30,7 @@ export default function System() {
   }, [load])
   return (
     <div>
-      <div className='SystemFilter'> 
+      <div className='SystemFilter'>
         <h2 >Filter :</h2>
         <div>
           {hide ? (<AiFillCaretDown onClick={() => {

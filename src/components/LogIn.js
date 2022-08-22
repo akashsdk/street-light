@@ -13,6 +13,8 @@ import Fade from 'react-reveal/Fade';
 import TextAnimation from "react-text-animations";
 import Logo1 from '../Image/Logo.png'
 import { BsHeadset } from "react-icons/bs";
+import { Link } from "react-router-dom";
+import HeplLine from '../Card/HeplLine';
 
 const { confirm } = Modal;
 const showConfirm = (msg) => {
@@ -106,10 +108,7 @@ export default function LogIn(props) {
                         <h1 className="chanheSubmitH1">Log In</h1>
                     </button>
 
-                    <div>
-                        Castomar Care
-                        <BsHeadset />
-                    </div>
+
 
                     <div className="chanheDownDiv"></div>
                 </div>
