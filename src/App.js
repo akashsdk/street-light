@@ -12,6 +12,9 @@ import AddLight from './screen/AddLight';
 import LogIn from './components/LogIn';
 import ChangePassword from './components/ChangePassword';
 import Loading from './Card/Loading';
+import HeplLine from './Card/HeplLine';
+
+
 import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 //import AnimatedCursor from "react-animated-cursor"
 import app from './firebase'
@@ -67,6 +70,7 @@ function App() {
           <Route path='/Loading' element={<Loading />}  />
         </Routes>
         <Footer />
+
 
       </div>
     </BrowserRouter>
