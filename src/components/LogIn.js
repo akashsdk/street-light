@@ -108,7 +108,7 @@ export default function LogIn(props) {
                         <h1 className="chanheSubmitH1">Log In</h1>
                     </button>
 
-
+                    <BsHeadset />
 
                     <div className="chanheDownDiv"></div>
                 </div>
@@ -120,6 +120,8 @@ export default function LogIn(props) {
                     Password: "123456"
                 </h3>
             </div>
+
+
 
         </div>
     )
