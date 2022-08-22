@@ -14,7 +14,7 @@ export default function AddLight() {
     const [area, setArea] = React.useState()
 
     const add = async () => {
-        
+
         if (!number || !area) {
             console.log('Please fill all the inputs')
             message.error('Please fill all the inputs');

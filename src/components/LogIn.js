@@ -5,7 +5,6 @@ import {
 } from 'antd';
 import "./LogIn.css";
 import './ChangePassword.css'
-import app from '../firebase'
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 import { ExclamationCircleOutlined } from '@ant-design/icons';
@@ -14,6 +13,10 @@ import { AiFillStar } from "react-icons/ai";
 import TextAnimation from "react-text-animations";
 import Logo1 from '../Image/Logo.png'
 import { BsHeadset } from "react-icons/bs";
+
+import { getFirestore } from "firebase/firestore";
+import app from '../firebase';
+import { doc, setDoc } from "firebase/firestore";
 
 import Fade from 'react-reveal/Fade';
 import { Link } from "react-router-dom";
@@ -41,6 +44,37 @@ const showConfirm = (msg) => {
 };
 
 export default function LogIn(props) {
+    const db = getFirestore(app);
+    const [name, setNumber] = React.useState()
+    const [area, setArea] = React.useState()
+
+    const addbutton = async () => {
+
+        if (!name || !area) {
+            console.log('Please fill all the inputs')
+            message.error('Please fill all the inputs');
+            return
+        }
+        try {
+            message.success('Success!');
+            await setDoc(doc(db, "message", name), {
+                email: true,
+                name: name,
+                phone: true,
+                problem: area,
+                text: true,
+                us_id: true,
+            });
+            console.log("Document written with ID: ");
+            window.location.reload()
+        } catch (e) {
+            console.error("Error adding document: ", e);
+        }
+    }
+
+
+
+
     const [hide, setHide] = React.useState(true);
 
     const [email, setEmail] = React.useState()
@@ -178,7 +212,7 @@ export default function LogIn(props) {
                     extra={
                         <Space>
                             <Button onClick={onClose}>Cancel</Button>
-                            <Button onClick={success} type="primary">
+                            <Button onClick={addbutton} type="primary" htmlType="submit">
                                 Submit
                             </Button>
                         </Space>
@@ -193,11 +227,10 @@ export default function LogIn(props) {
                                     rules={[
                                         {
                                             required: true,
-                                            message: 'Please enter user name',
                                         },
                                     ]}
                                 >
-                                    <Input placeholder="Please enter user name" />
+                                    <Input onChange={e => setNumber(e.target.value)} placeholder="Please enter user name" />
                                 </Form.Item>
                             </Col>
 
@@ -265,7 +298,10 @@ export default function LogIn(props) {
                                         },
                                     ]}
                                 >
-                                    <Select
+                                    <Select onChange={(e) => {
+                                        setArea(e)
+                                        console.log(e)
+                                    }}
 
                                         placeholder="Please choose type of problem">
                                         <Option value="None">None</Option>
