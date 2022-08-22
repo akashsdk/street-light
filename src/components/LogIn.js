@@ -1,5 +1,5 @@
-import React from 'react';
-import { Input, Button, Modal } from 'antd';
+import React, { useState } from 'react';
+import { Input, Button, Modal, Col, DatePicker, Drawer, Form, Row, Select, Space } from 'antd';
 import "./LogIn.css";
 import './ChangePassword.css'
 import app from '../firebase'
@@ -15,6 +15,9 @@ import Logo1 from '../Image/Logo.png'
 import { BsHeadset } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import HeplLine from '../Card/HeplLine';
+import { PlusOutlined } from '@ant-design/icons';
+
+const { Option } = Select;
 
 const { confirm } = Modal;
 const showConfirm = (msg) => {
@@ -56,7 +59,15 @@ export default function LogIn(props) {
     }
 
 
+    const [visible, setVisible] = useState(false);
 
+    const showDrawer = () => {
+        setVisible(true);
+    };
+
+    const onClose = () => {
+        setVisible(false);
+    };
 
 
     return (
@@ -108,7 +119,9 @@ export default function LogIn(props) {
                         <h1 className="chanheSubmitH1">Log In</h1>
                     </button>
 
-                    <BsHeadset />
+                    <Button type="primary" onClick={showDrawer} icon={<PlusOutlined />}>
+                        New account<BsHeadset />
+                    </Button>
 
                     <div className="chanheDownDiv"></div>
                 </div>
@@ -119,6 +132,132 @@ export default function LogIn(props) {
                     user ID: "someone@gmail.com", {"\n"}
                     Password: "123456"
                 </h3>
+            </div>
+
+            <div>
+                <Drawer
+                    title="Help Line"
+                    width={'50%'}
+                    onClose={onClose}
+                    visible={visible}
+                    bodyStyle={{
+                        paddingBottom: 80,
+                    }}
+                    extra={
+                        <Space>
+                            <Button onClick={onClose}>Cancel</Button>
+                            <Button onClick={onClose} type="primary">
+                                Submit
+                            </Button>
+                        </Space>
+                    }
+                >
+                    <Form layout="vertical" hideRequiredMark>
+                        <Row gutter={16}>
+                            <Col span={12}>
+                                <Form.Item
+                                    name="name"
+                                    label="Name:"
+                                    rules={[
+                                        {
+                                            required: true,
+                                            message: 'Please enter user name',
+                                        },
+                                    ]}
+                                >
+                                    <Input placeholder="Please enter user name" />
+                                </Form.Item>
+                            </Col>
+
+                        </Row>
+                        <Row gutter={16}>
+                            <Col span={12}>
+                                <Form.Item
+                                    name="userid"
+                                    label="User Id:"
+                                    rules={[
+                                        {
+                                            required: true,
+                                            message: 'Please enter User Id',
+                                        },
+                                    ]}
+                                >
+                                    <Input placeholder="Please enter User Id" />
+                                </Form.Item>
+                            </Col>
+                        </Row>
+                        <Row gutter={16}>
+                            <Col span={12}>
+                                <Form.Item
+                                    name="phone"
+                                    label="Phone No:"
+                                    rules={[
+                                        {
+                                            required: true,
+                                            message: 'Please enter phone number',
+                                        },
+                                    ]}
+                                >
+                                    <Input placeholder="Please enter phone number" />
+                                </Form.Item>
+                            </Col>
+
+                        </Row>
+                        <Row gutter={16}>
+                            <Col span={12}>
+                                <Form.Item
+                                    name="email"
+                                    label="Email Id:"
+                                    rules={[
+                                        {
+                                            required: true,
+                                            message: 'Please enter acctive email',
+                                        },
+                                    ]}
+                                >
+                                    <Input placeholder="Please enter acctive email" />
+                                </Form.Item>
+                            </Col>
+
+                        </Row>
+                        <Row gutter={16}>
+                            <Col span={12}>
+                                <Form.Item
+                                    name="type"
+                                    label="Type of Problem"
+                                    rules={[
+                                        {
+                                            required: true,
+                                            message: 'Please choose the type',
+                                        },
+                                    ]}
+                                >
+                                    <Select placeholder="Please choose the problem type">
+                                        <Option value="private">Forgot Password</Option>
+                                        <Option value="public">Forgot UserID</Option>
+                                        <Option value="privateandpublic">Forgot UserID And Passwoed</Option>
+                                    </Select>
+                                </Form.Item>
+                            </Col>
+                        </Row>
+                        <Row gutter={16}>
+                            <Col span={24}>
+                                <Form.Item
+                                    name="description"
+                                    label="Description"
+                                    rules={[
+                                        {
+                                            required: true,
+                                            message: 'please enter description',
+                                        },
+                                    ]}
+                                >
+                                    <Input.TextArea rows={4} placeholder="if you went please enter description" />
+                                </Form.Item>
+                            </Col>
+                        </Row>
+                    </Form>
+                </Drawer>
             </div>
 
 

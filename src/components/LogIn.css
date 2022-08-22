@@ -7,23 +7,26 @@
     border-radius: 50px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.logInInput{
+
+.logInInput {
     height: auto;
     width: 87%;
-    background-color:transparent;
+    background-color: transparent;
     border-width: 1px;
     border-radius: 20px;
     margin-top: 6px;
     margin-left: 5%;
     border: none;
     outline: none;
-    
+
 }
-.LogINlogo{
+
+.LogINlogo {
     height: 150px;
     width: 150px;
 }
-.LogINfontDiv{
+
+.LogINfontDiv {
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
@@ -31,13 +34,28 @@
     align-items: center;
     margin-top: 20px;
 }
-.LogINtext{
+
+.LogINtext {
     color: rgb(0, 255, 255);
 }
-.LogINtextDiv{
+
+.LogINtextDiv {
     display: flex;
     flex-direction: row;
 }
-.LogINdivBox{
+
+.LogINdivBox {
     height: auto;
+}
+
+
+.site-form-in-drawer-wrapper {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    padding: 10px 16px;
+    text-align: right;
+    background: #fff;
+    border-top: 1px solid #e9e9e9;
 }
