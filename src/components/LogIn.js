@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { Input, Button, Modal, Col, DatePicker, Drawer, 
-    Form, Row, Select, Space, message, } from 'antd';
+import {
+    Input, Button, Modal, Col, DatePicker, Drawer,
+    Form, Row, Select, Space, message,
+} from 'antd';
 import "./LogIn.css";
 import './ChangePassword.css'
 import app from '../firebase'
@@ -9,16 +11,17 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { ExclamationCircleOutlined } from '@ant-design/icons';
 import { VscEyeClosed, VscEye } from "react-icons/vsc";
 import { AiFillStar } from "react-icons/ai";
-
-import Fade from 'react-reveal/Fade';
 import TextAnimation from "react-text-animations";
 import Logo1 from '../Image/Logo.png'
 import { BsHeadset } from "react-icons/bs";
+
+import Fade from 'react-reveal/Fade';
 import { Link } from "react-router-dom";
 import HeplLine from '../Card/HeplLine';
 import { PlusOutlined } from '@ant-design/icons';
 
 const { Option } = Select;
+const key = 'updatable';
 
 const { confirm } = Modal;
 const showConfirm = (msg) => {
@@ -57,6 +60,19 @@ export default function LogIn(props) {
                 console.log(errorMessage)
                 showConfirm(errorCode)
             });
+
+
+        message.loading({
+            content: 'Loading...',
+            key,
+        });
+        setTimeout(() => {
+            message.success({
+                content: 'Log In Done',
+                key,
+                duration: 2,
+            });
+        }, 1000);
     }
 
 
@@ -64,20 +80,25 @@ export default function LogIn(props) {
 
     const showDrawer = () => {
         setVisible(true);
-        
+
     };
 
     const onClose = () => {
         setVisible(false);
         message.error('Cancel');
     };
+    const onSubmit = () => {
+        setVisible(true);
 
-    
+    }
+
+    const success = () => {
+        setVisible(false);
+        message.success('successfully done');
+    };
 
 
-    const [number, setNumber] = React.useState()
-    const [area, setArea] = React.useState()
-    
+
 
 
     return (
@@ -130,8 +151,9 @@ export default function LogIn(props) {
                     </button>
 
                     <button className='logINLastbutton' onClick={showDrawer}>
-                        Help Line <BsHeadset className='logINlastIcon'/>
+                        Help Line <BsHeadset className='logINlastIcon' />
                     </button>
+
 
                     <div className="chanheDownDiv"></div>
                 </div>
@@ -156,7 +178,7 @@ export default function LogIn(props) {
                     extra={
                         <Space>
                             <Button onClick={onClose}>Cancel</Button>
-                            <Button onClick={onClose} type="primary">
+                            <Button onClick={success} type="primary">
                                 Submit
                             </Button>
                         </Space>
@@ -226,8 +248,7 @@ export default function LogIn(props) {
                                         },
                                     ]}
                                 >
-                                    <Input placeholder="Please enter acctive email" 
-                                    onChange={e => setNumber(e.target.value)}/>
+                                    <Input placeholder="Please enter acctive email" />
                                 </Form.Item>
                             </Col>
 
@@ -245,10 +266,9 @@ export default function LogIn(props) {
                                     ]}
                                 >
                                     <Select
-                                    onChange={(e) => {
-                                        setArea(e)
-                                        console.log(e) }}
-                                         placeholder="Please choose the problem type">
+
+                                        placeholder="Please choose type of problem">
+                                        <Option value="None">None</Option>
                                         <Option value="private">Forgot Password</Option>
                                         <Option value="public">Forgot UserID</Option>
                                         <Option value="privateandpublic">Forgot UserID And Passwoed</Option>
