@@ -68,6 +68,7 @@ function App() {
           <Route path="/Profile" element={<Profile setName={setName} name2={userName}/>} />
           <Route path="/ChangePassword" element={<ChangePassword  />} />
           <Route path='/Loading' element={<Loading />}  />
+          <Route path='/HeplLine' element={<HeplLine />} />
         </Routes>
         <Footer />
 
