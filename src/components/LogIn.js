@@ -45,23 +45,28 @@ const showConfirm = (msg) => {
 
 export default function LogIn(props) {
     const db = getFirestore(app);
-    const [name, setNumber] = React.useState()
-    const [area, setArea] = React.useState()
+
+    const [gmail, setgmail] = React.useState()
+    const [phone, setPhone] = React.useState()
+    const [name, setName] = React.useState()
+    const [problem, setProblem] = React.useState()
+    const [text, settext] = React.useState()
+    const [us_id,setUsid] = React.useState()
 
     const addbutton = async () => {
 
-        if (!name || !area) {
+        if (!gmail || !name || !phone || !problem || !text || !us_id) {
             console.log('Please fill all the inputs')
             message.error('Please fill all the inputs');
             return
         }
         try {
             message.success('Success!');
-            await setDoc(doc(db, "message",message), {
+            await setDoc(doc(db, "message",email), {
                 email: true,
-                name: name,
+                name: true,
                 phone: true,
-                problem: area,
+                problem: true,
                 text: true,
                 us_id: true,
             });
@@ -212,7 +217,7 @@ export default function LogIn(props) {
                     extra={
                         <Space>
                             <Button onClick={onClose}>Cancel</Button>
-                            <Button onClick={addbutton} type="primary" htmlType="submit">
+                            <Button onClick={addbutton} >
                                 Submit
                             </Button>
                         </Space>
@@ -230,7 +235,7 @@ export default function LogIn(props) {
                                         },
                                     ]}
                                 >
-                                    <Input onChange={e => setNumber(e.target.value)} placeholder="Please enter user name" />
+                                    <Input onChange={e => setName(e.target.value)} placeholder="Please enter user name" />
                                 </Form.Item>
                             </Col>
 
@@ -247,7 +252,7 @@ export default function LogIn(props) {
                                         },
                                     ]}
                                 >
-                                    <Input placeholder="Please enter User Id" />
+                                    <Input  onChange={e => setUsid(e.target.value)} placeholder="Please enter User Id" />
                                 </Form.Item>
                             </Col>
                         </Row>
@@ -264,7 +269,7 @@ export default function LogIn(props) {
                                         },
                                     ]}
                                 >
-                                    <Input placeholder="Please enter phone number" />
+                                    <Input  onChange={e => setPhone(e.target.value)} placeholder="Please enter phone number" />
                                 </Form.Item>
                             </Col>
 
@@ -281,7 +286,7 @@ export default function LogIn(props) {
                                         },
                                     ]}
                                 >
-                                    <Input placeholder="Please enter acctive email" />
+                                    <Input  onChange={e => setgmail(e.target.value)} placeholder="Please enter acctive email" />
                                 </Form.Item>
                             </Col>
 
@@ -298,8 +303,9 @@ export default function LogIn(props) {
                                         },
                                     ]}
                                 >
-                                    <Select onChange={(e) => {
-                                        setArea(e)
+                                    <Select  
+                                    onChange={(e) => {
+                                        setProblem(e)
                                         console.log(e)
                                     }}
 
@@ -324,7 +330,7 @@ export default function LogIn(props) {
                                         },
                                     ]}
                                 >
-                                    <Input.TextArea rows={4} placeholder="if you went please enter description" />
+                                    <Input.TextArea rows={4}  onChange={e => settext(e.target.value)} placeholder="if you went please enter description" />
                                 </Form.Item>
                             </Col>
                         </Row>
