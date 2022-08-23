@@ -57,7 +57,7 @@ export default function LogIn(props) {
         }
         try {
             message.success('Success!');
-            await setDoc(doc(db, "message", name), {
+            await setDoc(doc(db, "message",message), {
                 email: true,
                 name: name,
                 phone: true,
