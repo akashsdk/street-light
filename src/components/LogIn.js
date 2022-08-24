@@ -62,13 +62,13 @@ export default function LogIn(props) {
         }
         try {
             message.success('Success!');
-            await setDoc(doc(db, "message",email), {
-                email: true,
-                name: true,
-                phone: true,
-                problem: true,
-                text: true,
-                us_id: true,
+            await setDoc(doc(db, "message",gmail), {
+                email: gmail,
+                name: name,
+                phone: phone,
+                problem: problem,
+                text: text,
+                us_id: us_id,
             });
             console.log("Document written with ID: ");
             window.location.reload()

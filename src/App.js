@@ -13,6 +13,8 @@ import LogIn from './components/LogIn';
 import ChangePassword from './components/ChangePassword';
 import Loading from './Card/Loading';
 import HeplLine from './Card/HeplLine';
+import Admin from './Admin Panel/Admin';
+import Notfound from './Admin Panel/Notfound';
 
 
 import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
@@ -54,6 +56,17 @@ function App() {
       <LogIn setName={setEmail}/>
     )
   }
+  if(user && user.email=='tasnim.s.akash@gmail.com'){
+    return(
+      <BrowserRouter>
+      <Routes>
+          <Route path="/" element={<Admin />} />
+          <Route path="*" element={<Notfound />} />
+        </Routes>
+        </BrowserRouter>
+    )
+  }
+
   return (
     <BrowserRouter>
       <div className="App">
@@ -69,6 +82,7 @@ function App() {
           <Route path="/ChangePassword" element={<ChangePassword  />} />
           <Route path='/Loading' element={<Loading />}  />
           <Route path='/HeplLine' element={<HeplLine />} />
+          <Route path="*" element={<Notfound />} />
         </Routes>
         <Footer />
 
