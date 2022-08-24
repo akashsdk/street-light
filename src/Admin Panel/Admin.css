@@ -1,7 +1,36 @@
-.adminBody{
+.adminBody {
     height: 750px;
     background-color: rgb(254, 237, 237);
     margin: 3%;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgb(254, 237, 237);
+}
+.adminHeader{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: #3fa46a;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+.adminLogoutButton{
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    color: rgb(255, 0, 0);
+    background-color: transparent;
+    border: none;
+    height: 30px;
+}
+.adminLogoutButton:hover {
+    color: rgb(0, 0, 0);
+}
+.adminLogoutIcon {
+    font-size: 23px;
+    margin-top: 2px;
+}
+.adminMenuIcon{
+    font-size: 23px;
+    margin-left: 10px;
 }
