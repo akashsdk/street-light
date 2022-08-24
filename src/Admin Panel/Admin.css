@@ -1,36 +1,59 @@
 .adminBody {
-    height: 750px;
-    background-color: rgb(254, 237, 237);
+    height: auto;
+    background-color: rgb(255, 255, 255);
     margin: 3%;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgb(254, 237, 237);
+}
+.adminHomeIconDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+.adminHomeText{
+    margin-left: 5px;
+    margin-top: 10px;
+}
+.adminHomeIcon{
+    font-size: 23px;
 }
 .adminHeader{
     height: 50px;
     display: flex;
     align-items: center;
     flex-direction: row;
-    background-color: #3fa46a;
+    background-color: #cdd3d8;
     border-radius: 5px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
-.adminLogoutButton{
-    display: flex;
-    flex-direction: row;
-    font-size: 18px;
-    color: rgb(255, 0, 0);
-    background-color: transparent;
-    border: none;
-    height: 30px;
-}
-.adminLogoutButton:hover {
-    color: rgb(0, 0, 0);
-}
 .adminLogoutIcon {
-    font-size: 23px;
-    margin-top: 2px;
+    font-size: 30px;
+    margin-top: 3px;
+}
+.adminLogoutIcon:hover {
+    color: rgb(255, 0, 0);
 }
 .adminMenuIcon{
     font-size: 23px;
     margin-left: 10px;
+    background-color: transparent;
+    border: none;
+}
+.adminScendBody{
+    display: flex;
+    flex-direction: row;
+}
+.adminLeft{
+    height: 300px;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.adminRight{
+    height: auto;
+    width: 80%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }

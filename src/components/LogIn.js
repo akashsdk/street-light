@@ -294,8 +294,8 @@ export default function LogIn(props) {
                         <Row gutter={16}>
                             <Col span={12}>
                                 <Form.Item
-                                    name="type"
-                                    label="Type of Problem"
+                                    name="Problem"
+                                    label="Problem"
                                     rules={[
                                         {
                                             required: true,
@@ -309,11 +309,13 @@ export default function LogIn(props) {
                                         console.log(e)
                                     }}
 
+                                    allowClear
+
                                         placeholder="Please choose type of problem">
                                         <Option value="None">None</Option>
-                                        <Option value="private">Forgot Password</Option>
-                                        <Option value="public">Forgot UserID</Option>
-                                        <Option value="privateandpublic">Forgot UserID And Passwoed</Option>
+                                        <Option value="Forgot Password">Forgot Password</Option>
+                                        <Option value="Forgot UserID">Forgot UserID</Option>
+                                        <Option value="Forgot UserID And Passwoed">Forgot UserID And Passwoed</Option>
                                     </Select>
                                 </Form.Item>
                             </Col>
