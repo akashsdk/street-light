@@ -45,10 +45,10 @@ export default function Profile(props) {
     }
     try {
       message.success('Success!');
-      await setDoc(doc(db, "user_data", email), {
+      await setDoc(doc(db, "user_data", auth.currentUser.uid), {
         name: name,
         email: email,
-        Phone_no: Phone_no,
+        phone: Phone_no,
         address: address,
         uesr_id: true,
       });
@@ -62,11 +62,11 @@ export default function Profile(props) {
 
   return (
     <div className="profileDiv">
-
+     
 
       <h2 className="profileH2">User Id </h2>
       <div className="profileInputDiv">
-        <h3 className="profileInput">akasdfg</h3>
+        <h3 className="profileInput">{auth.currentUser.uid}</h3>
       </div>
 
 
@@ -112,7 +112,7 @@ export default function Profile(props) {
         <Button onClick={logout} type="link" className="profileForgetButton" danger>
           Log out
         </Button>
-        
+
       </div>
       <div className="profileDownDiv"></div>
     </div>
