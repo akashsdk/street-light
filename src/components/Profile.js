@@ -57,6 +57,11 @@ export default function Profile(props) {
       <div>
         <Button type="link" className="profileForgetButton" danger>
 
+          <Link to="/MainProfile">Go Back</Link>
+        </Button>
+
+        <Button type="link" className="profileForgetButton" danger>
+
           <Link to="/ChangePassword">Change Password</Link>
         </Button>
         <Button onClick={logout} type="link" className="profileForgetButton" danger>

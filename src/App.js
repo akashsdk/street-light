@@ -15,6 +15,7 @@ import Loading from './Card/Loading';
 import HeplLine from './Card/HeplLine';
 import Admin from './Admin Panel/Admin';
 import Notfound from './Admin Panel/Notfound';
+import MainProfile from './screen/MainProfile';
 
 
 import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
@@ -82,6 +83,7 @@ function App() {
           <Route path="/ChangePassword" element={<ChangePassword  />} />
           <Route path='/Loading' element={<Loading />}  />
           <Route path='/HeplLine' element={<HeplLine />} />
+          <Route path='/MainProfile' element={<MainProfile />} />
           <Route path="*" element={<Notfound />} />
         </Routes>
         <Footer />
