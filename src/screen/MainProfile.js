@@ -47,6 +47,7 @@ export default function MainProfile() {
 
 
                 <div className='mainProfileName'>
+                    
                     <h2 className='mainProfilebosText'>Name:</h2>
                 </div>
 
