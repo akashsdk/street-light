@@ -56,4 +56,17 @@
     width: 80%;
     background-color: rgb(255, 255, 255);
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.adminLeftButton{
+    background-color: aquamarine;
+    border: none;
+    font-size: 20px;
+    border-radius: 15px;
+}
+.adminLeftButton:hover{
+    background-color: rgb(127, 163, 255);
 }
