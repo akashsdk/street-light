@@ -29,6 +29,9 @@ export default function System() {
   React.useEffect(() => {
     newData()
   }, [load])
+
+
+  
   return (
     <div>
       <div className='SystemFilter'>

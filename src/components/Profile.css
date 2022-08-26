@@ -21,6 +21,22 @@
     border: 1.5px solid rgba(0, 0, 0, 0.05);
     border-color: rgb(158, 157, 157);
 }
+.profileInputAddressDiv{
+    height: 100px;
+    border-radius: 20px;
+    border: 1.5px solid rgba(0, 0, 0, 0.05);
+    border-color: rgb(158, 157, 157);
+}
+.profileInput2{
+    height: 90px;
+    width: 90%;
+    background-color:transparent;
+    border-width: 1px;
+    border-radius: 20px;
+    margin-top: 5px;
+    border: none;
+    outline: none;
+}
 .profileInput{
     height: auto;
     width: 90%;

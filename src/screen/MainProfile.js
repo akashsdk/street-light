@@ -10,6 +10,8 @@ import app from "../firebase";
 import { Button } from 'antd';
 import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 
+
+
 export default function MainProfile() {
     const auth = getAuth(app);
     const logout = () => {
