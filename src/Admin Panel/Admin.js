@@ -190,6 +190,11 @@ export default function Admin() {
                                 <h1>Street Light</h1>
                                 <FaRegTrashAlt onClick={DeleteLight} className='adminRightTitelIcon' />
                             </div>
+                            <div>
+                                Filter:
+                            </div>
+
+                            
                             <div className='adminRBoxText'>
                                 <div className='adminRDiv1'>
                                     <h2>User ID:</h2>
