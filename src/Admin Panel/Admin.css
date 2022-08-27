@@ -45,11 +45,10 @@
     flex-direction: row;
 }
 .adminLeft{
-    height: 300px;
+    height: 600px;
     width: 20%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 10px;
 }
 .adminRight{
     height: auto;
@@ -62,11 +61,81 @@
     flex-direction: column;
 }
 .adminLeftButton{
-    background-color: aquamarine;
+    background-color: transparent;
     border: none;
     font-size: 20px;
     border-radius: 15px;
+    margin-top: -10px;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
+
 .adminLeftButton:hover{
-    background-color: rgb(127, 163, 255);
+    color: #3fa46a;
+}
+.adminLeftButtonIcon{
+    font-size: 20px;
+    margin-top: -20px;
+    color: rgb(69, 162, 92);
+}
+.adminLeftButtonText{
+    font-size: 10ox;
+    margin-left: 10px;
+}
+
+
+
+
+
+
+.adminRightTitel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.adminRightTitelIcon{
+    font-size: 22px;
+    margin: 10px;
+    margin-top: -5px;
+    color: black;
+}
+.adminRightTitelIcon:hover{
+    color: rgb(40, 244, 118);
+}
+.adminRBoxText{
+    height: 40px;
+    width: 600px;
+    margin-top: 20px;
+    border: 1px solid rgb(57, 244, 91);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+.adminRBoxText2{
+    height: 100px;
+    width: 600px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgb(57, 244, 91);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+.adminRDiv1{
+    width: 100px;
+    margin-top: 8px;
+    margin-left: 20px;
+}
+.adminRDiv2{
+    width: auto;
+    margin-top: 8px;
+    margin-left: 20px;
+}
+.adminPagination{
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
