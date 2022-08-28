@@ -412,7 +412,7 @@ export default function Admin() {
                                             </Button>
                                         </div>
                                         <div className='adminRightTiteOutput'>
-                                            nbnn
+                                            
                                         </div>
 
                                     </div>

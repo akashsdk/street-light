@@ -16,6 +16,7 @@ import HeplLine from './Card/HeplLine';
 import Admin from './Admin Panel/Admin';
 import Notfound from './Admin Panel/Notfound';
 import MainProfile from './screen/MainProfile';
+import Try from './Admin Panel/Try';
 
 
 import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
@@ -62,6 +63,7 @@ function App() {
       <BrowserRouter>
       <Routes>
           <Route path="/" element={<Admin />} />
+          <Route path="/Try" element={<Try />} />
           <Route path="*" element={<Notfound />} />
         </Routes>
         </BrowserRouter>
