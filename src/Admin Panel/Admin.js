@@ -12,6 +12,7 @@ import {
     AiFillMessage,
     AiFillExclamationCircle
 } from "react-icons/ai";
+
 import Loading from "../Card/Loading"
 import Notfound from "./Notfound.js"
 import { FaRegTrashAlt } from "react-icons/fa";
@@ -21,8 +22,12 @@ import {
     SettingFilled,
     SmileOutlined,
     SyncOutlined,
+    UploadOutlined,
 } from '@ant-design/icons';
 import { BsFillChatRightTextFill, BsFillPencilFill } from "react-icons/bs";
+
+
+
 
 import { getAuth, signOut } from "firebase/auth";
 import app from "../firebase";
@@ -171,7 +176,7 @@ export default function Admin() {
                     <h2 className='adminHomeText'>Dashbord</h2>
                 </div>
 
-                <div>
+                <div className='adminHomeIconDiv2'>
                     <BsPower onClick={logout} className='adminLogoutIcon' />
                 </div>
             </div>
@@ -394,7 +399,20 @@ export default function Admin() {
                             ) :
                                 page == 4 ? (
                                     <div className='adminRight'>
-                                        Notice Board
+                                        <div className='adminRightTitel'>
+                                            <h1>Notice Board</h1>
+                                            <FaRegTrashAlt className='adminRightTitelIcon' />
+                                        </div>
+
+                                        <div>
+                                            <Button icon={<UploadOutlined />} className='adminUploadButton'>
+                                                Click to UpLoad
+                                            </Button>
+                                        </div>
+                                        <div className='adminRightTiteOutput'>
+                                            nbnn
+                                        </div>
+
                                     </div>
                                 ) : (<></>)
                 }
