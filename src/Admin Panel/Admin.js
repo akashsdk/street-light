@@ -167,6 +167,8 @@ export default function Admin() {
         })
     }
 
+    //Output and InPut data from "notice"
+
     return (
         <div className='adminBody'>
             <div className='adminHeader'>
