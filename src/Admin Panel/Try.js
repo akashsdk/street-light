@@ -82,19 +82,26 @@ export default function Try() {
         <div>
             {user ? (<></>) : (<Loading />)}
             <button onClick={() => {
-                    domRef.current.click()
-                }}> Uplode</button>
+                domRef.current.click()
+            }}> Uplode</button>
             <div className='mainProfileImgDiv'>
                 {
                     user ? (
                         user.map((doc, i) => (
-                            <img key={i} src={doc.image} className='mainProfileImg'>
-                            </img>
+                            <div key={i} style={{
+                                height:'auto',
+                                marginLeft:'20px',
+                                marginTop:'50px'
+                            }}>
+                                <img src={doc.image} className='mainProfileImg'>
+                                </img>
+                                <button>delete</button>
+                            </div>
                         ))
-                        
+
                     ) : (<></>)
                 }
-                
+
                 <input ref={domRef} onChange={(e) => {
                     console.log(e.target.files)
                     fileToDataUri(e.target.files[0]).then(url => {
@@ -103,6 +110,7 @@ export default function Try() {
 
                     upload(e.target.files[e.target.files.length - 1])
                 }} style={{ display: 'none' }} accept='image/*' type='file' name='file'></input>
+
             </div>
         </div>
     )
