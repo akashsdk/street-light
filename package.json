@@ -22,6 +22,7 @@
     "react-slideshow-image": "^4.0.4",
     "react-switch": "^7.0.0",
     "react-text-animations": "^1.1.10",
+    "react-uuid": "^1.0.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
