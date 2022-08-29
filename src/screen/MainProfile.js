@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import "../styles/MainProfile.css"
-import ProfilePhoto from "../Image/Pfofilephoto.jpeg"
+import ProfilePhoto from "../Image/Pfofilephoto2.jpeg"
+
 import { AiOutlinePaperClip, AiOutlineLogout, AiFillEdit } from "react-icons/ai";
 import Loading from "../Card/Loading.js"
+import Notfound from '../Admin Panel/Notfound';
 
 
 
@@ -15,7 +17,7 @@ import { getDownloadURL, getStorage, uploadBytes, ref } from 'firebase/storage'
 
 
 
-export default function MainProfile() {
+export default function MainProfile(props) {
     const auth = getAuth(app);
     const db = getFirestore(app);
     const storage = getStorage(app)
@@ -81,7 +83,7 @@ export default function MainProfile() {
     }, [])
     return (
         <div>
-            {user ? (<></>) : (<Loading />)}
+            {user ? (<></>) : (<Notfound NotfoundText="Not Found Image" />)}
             <div className='mainProfileTitelBody'>
                 <Button onClick={logout} type="link" style={{ marginTop: '-15px' }} danger>
                     <AiOutlineLogout className='mainProfileTitelIcon' />

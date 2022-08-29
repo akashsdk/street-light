@@ -62,9 +62,9 @@ function App() {
     return(
       <BrowserRouter>
       <Routes>
-          <Route path="/" element={<Admin />} />
+          <Route path="/*" element={<Admin />} />
           <Route path="/Try" element={<Try />} />
-          <Route path="*" element={<Notfound />} />
+          <Route path="*" element={<Notfound NotfoundText="Page Not Found"/>} />
         </Routes>
         </BrowserRouter>
     )
@@ -88,7 +88,7 @@ function App() {
           <Route path='/Loading' element={<Loading />}  />
           <Route path='/HeplLine' element={<HeplLine />} />
           <Route path='/MainProfile' element={<MainProfile />} />
-          <Route path="*" element={<Notfound />} />
+          <Route path="*" element={<Notfound NotfoundText="Page Not Found" />} />
         </Routes>
         <Footer />
 

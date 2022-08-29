@@ -5,14 +5,9 @@ import { BsFillCloudSlashFill } from "react-icons/bs";
 
 
 
-const Call = () => {
-    return (
-        <h1> Page Not Found</h1>
-    )
 
-}
 
-export default function Notfound() {
+export default function Notfound(props) {
     return (
         <div style={{
             height: 'auto',
@@ -33,7 +28,7 @@ export default function Notfound() {
 
             <Spin tip="Loading...!">
                 <Alert
-                    message={<Call />}
+                    message={props.NotfoundText}
                     type="info"
                 />
             </Spin>

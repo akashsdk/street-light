@@ -34,6 +34,7 @@ import app from "../firebase";
 import { getFirestore } from "firebase/firestore";
 import { collection, getDocs, deleteField, updateDoc, doc, deleteDoc } from "firebase/firestore";
 import { async } from '@firebase/util';
+import { Link } from 'react-router-dom';
 
 
 
@@ -412,7 +413,7 @@ export default function Admin() {
                                             </Button>
                                         </div>
                                         <div className='adminRightTiteOutput'>
-                                            
+                                        <Link  to="/try">Try korchi vai, click</Link>
                                         </div>
 
                                     </div>
