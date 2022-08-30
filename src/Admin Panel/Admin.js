@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Admin.css'
 import {
     Button, Drawer, Radio, message,
-    Col, Row, Pagination, Space, Spin, Select,Cascader
+    Col, Row, Pagination, Space, Spin, Select, Cascader
 } from 'antd';
 import { BsPower } from "react-icons/bs";
 import {
@@ -49,7 +49,7 @@ export default function Admin() {
     const [index, setIndex] = React.useState(0)
     const [index2, setIndex2] = React.useState(0)
     const [index3, setIndex3] = React.useState(0)
-    const [AllData,setAllData]=React.useState()
+    const [AllData, setAllData] = React.useState()
 
 
 
@@ -173,39 +173,39 @@ export default function Admin() {
     //Output and InPut data from "notice"
 
     //Notice Filter
-    const AllArea =(value) =>{
-        let arr=AllData.filter(d=>d.area==value);
-        if(value=='AllArea'){
+    const AllArea = (value) => {
+        let arr = AllData.filter(d => d.area == value);
+        if (value == 'AllArea') {
             return setData2(AllData)
         }
-        if(arr){
+        if (arr) {
             return setData2(arr)
         }
         return setData2(null)
-    } ;
+    };
 
     const options = [
         {
-          value: 'AllArea',
-          label: 'All-Area',
+            value: 'AllArea',
+            label: 'All-Area',
         },
         {
-          value: 'Dhaka-1',
-          label: 'Dhaka-1',
+            value: 'Dhaka-1',
+            label: 'Dhaka-1',
         },
         {
             value: 'Dhaka-2',
             label: 'Dhaka-2',
-          },
-          {
+        },
+        {
             value: 'Dhaka-3',
             label: 'Dhaka-3',
-          },
-      ];
-      
-      const onChange = (value) => {
+        },
+    ];
+
+    const onChange = (value) => {
         AllArea(value)
-      };
+    };
 
     return (
         <div className='adminBody'>
@@ -267,77 +267,84 @@ export default function Admin() {
 
                 </div>
                 {
+                    //Street Light
                     page == 1 ? (
-                        data2?(
+                        data2 ? (
                             <div className='adminRight'>
-                            <div className='adminRightTitel'>
-                                <h1>Street Light</h1>
-                                <FaRegTrashAlt onClick={DeleteLight} className='adminRightTitelIcon' />
+                                <div className='adminRightTitel'>
+                                    <h1>Street Light</h1>
+                                </div>
+                                <div className='adminRightTitelIconDiv'>
+                                    <Cascader options={options} onChange={onChange} placeholder="Please select Area" />
+                                    <button onClick={DeleteLight} className='adminRightTitelIconButton'>
+                                        <div className='adminRightTitelIconBox'>
+                                            <FaRegTrashAlt className='adminRightTitelIcon' />
+                                            <p className='adminRightTitelIconP'>Delete</p>
+                                        </div>
+                                    </button>
+                                </div>
+
+
+                                <div className='adminRBoxText'>
+                                    <div className='adminRDiv1'>
+                                        <h2>Street Light No:</h2>
+                                    </div>
+                                    <div className='adminRDiv2'>
+                                        <h2> {data2 && data2[index2].number ? data2[index2].number : ''}</h2>
+                                    </div>
+                                </div>
+
+
+                                <div className='adminRBoxText'>
+                                    <div className='adminRDiv1'>
+                                        <h2>Power:</h2>
+                                    </div>
+                                    <div className='adminRDiv2'>
+                                        <h2>{data2 && data2[index2].power ? data2[index2].power : ''}</h2>
+                                    </div>
+                                </div>
+
+
+
+                                <div className='adminRBoxText'>
+                                    <div className='adminRDiv1'>
+                                        <h2>LDR Sensor:</h2>
+                                    </div>
+                                    <div className='adminRDiv2'>
+                                        <h2>{data2 && data2[index2].ldr ? data2[index2].lde : ''}</h2>
+                                    </div>
+                                </div>
+
+
+
+                                <div className='adminRBoxText'>
+                                    <div className='adminRDiv1'>
+                                        <h2>Motion Sensor:</h2>
+                                    </div>
+                                    <div className='adminRDiv2'>
+                                        <h2>{data2 && data2[index2].m_sensor ? data2[index2].m_sensor : ''}</h2>
+                                    </div>
+                                </div>
+
+
+                                <div className='adminRBoxText'>
+                                    <div className='adminRDiv1'>
+                                        <h2>Area:</h2>
+                                    </div>
+                                    <div className='adminRDiv2'>
+                                        <h2>{data2 && data2[index2].area ? data2[index2].area : ''}</h2>
+                                    </div>
+                                </div>
+
+                                <Pagination className='adminPagination' onChange={(index, size) => {
+                                    setIndex2(index - 1)
+                                }} defaultCurrent={1} total={data2 ? (data2.length * 10) : ''} />
+
+
                             </div>
-                            <div>
-                            <Cascader options={options} onChange={onChange} placeholder="Please select Area" />
-                            </div>
-
-
-                            <div className='adminRBoxText'>
-                                <div className='adminRDiv1'>
-                                    <h2>Street Light No:</h2>
-                                </div>
-                                <div className='adminRDiv2'>
-                                    <h2> {data2 && data2[index2].number ? data2[index2].number : ''}</h2>
-                                </div>
-                            </div>
-
-
-                            <div className='adminRBoxText'>
-                                <div className='adminRDiv1'>
-                                    <h2>Power:</h2>
-                                </div>
-                                <div className='adminRDiv2'>
-                                    <h2>{data2 && data2[index2].power ? data2[index2].power : ''}</h2>
-                                </div>
-                            </div>
-
-
-
-                            <div className='adminRBoxText'>
-                                <div className='adminRDiv1'>
-                                    <h2>LDR Sensor:</h2>
-                                </div>
-                                <div className='adminRDiv2'>
-                                    <h2>{data2 && data2[index2].ldr ? data2[index2].lde : ''}</h2>
-                                </div>
-                            </div>
-
-
-
-                            <div className='adminRBoxText'>
-                                <div className='adminRDiv1'>
-                                    <h2>Motion Sensor:</h2>
-                                </div>
-                                <div className='adminRDiv2'>
-                                    <h2>{data2 && data2[index2].m_sensor ? data2[index2].m_sensor : ''}</h2>
-                                </div>
-                            </div>
-
-
-                            <div className='adminRBoxText'>
-                                <div className='adminRDiv1'>
-                                    <h2>Area:</h2>
-                                </div>
-                                <div className='adminRDiv2'>
-                                    <h2>{data2 && data2[index2].area ? data2[index2].area : ''}</h2>
-                                </div>
-                            </div>
-
-                            <Pagination className='adminPagination' onChange={(index, size) => {
-                                setIndex2(index - 1)
-                            }} defaultCurrent={1} total={data2 ? (data2.length * 10) : ''} />
-
-
-                        </div>
-                        ):(<Loading/>)
+                        ) : (<Loading />)
                     ) :
+                        // User Complen
                         page == 2 ? (
                             <div className='adminRight'>
                                 <div className='adminRightTitel'>
@@ -399,6 +406,7 @@ export default function Admin() {
 
                             </div>
                         ) :
+                            // Contact Us
                             page == 3 ? (
                                 <div className='adminRight'>
                                     <div className='adminRightTitel'>
@@ -439,6 +447,7 @@ export default function Admin() {
 
                                 </div>
                             ) :
+                                // Notice Board
                                 page == 4 ? (
                                     <div className='adminRight'>
                                         <div className='adminRightTitel'>
@@ -452,7 +461,7 @@ export default function Admin() {
                                             </Button>
                                         </div>
                                         <div className='adminRightTiteOutput'>
-                                        <Link  to="/try">Try korchi vai, click</Link>
+                                            <Link to="/try">Try korchi vai, click</Link>
                                         </div>
 
                                     </div>

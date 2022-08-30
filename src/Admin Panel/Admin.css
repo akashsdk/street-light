@@ -100,14 +100,40 @@
     align-items: center;
     flex-direction: row;
 }
-.adminRightTitelIcon{
-    font-size: 22px;
-    margin: 10px;
-    margin-top: -5px;
-    color: black;
+.adminRightTitelIconButton{
+    height: 38px;
+    margin-left: 20px;
+    outline: none;
+    border-radius: 10px;
+    border-color: white;
+    background-color: #3fa46a;
 }
-.adminRightTitelIcon:hover{
-    color: rgb(40, 244, 118);
+.adminRightTitelIconButton:hover{
+    background-color: transparent;
+}
+.adminRightTitelIconBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.adminRightTitelIconBox:hover{
+    color: #3fa46a;
+}
+.adminRightTitelIconDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.adminRightTitelIcon{
+    font-size: 20px;
+    margin: 10px;
+    margin-top: -10px;
+}
+.adminRightTitelIconP{
+    font-size: 20px;
 }
 .adminRBoxText{
     height: 40px;
