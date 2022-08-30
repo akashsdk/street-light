@@ -8,7 +8,7 @@ import { getAuth, signOut } from "firebase/auth";
 import app from "../firebase";
 import { Button, Pagination,message } from 'antd';
 import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
-import { onSnapshot, doc, getFirestore, updateDoc, setDoc, query, collection, where, deleteDoc } from 'firebase/firestore';
+import { onSnapshot, doc, getFirestore, updateDoc, setDoc, query, where, deleteDoc, collection} from 'firebase/firestore';
 import { getDownloadURL, getStorage, uploadBytes, ref,deleteObject} from 'firebase/storage';
 import uuid from 'react-uuid';
 
@@ -90,22 +90,33 @@ export default function Try() {
 
     //detete
 
-    const Delete3 = async (docc) => {
+    const Delete = async (docc) => {
         await deleteDoc(doc(db, "notice_id", docc));
     }
 
-    const DeleteContact = () => {
-        Delete3(data3.id).then(() => {
-            console.log('success')
-            message.success('Success');
-            window.location.reload()
+    // const Deleteccv = () => {
+    //     Delete2().then(() => {
+    //         console.log('success')
+    //         message.success('Success');
+    //         window.location.reload()
 
-        }).catch(err => {
-            console.log(err.message)
-            message.error('Error');
-            window.location.reload()
-        })
-    }
+    //     }).catch(err => {
+    //         console.log(err.message)
+    //         message.error('Error');
+    //         window.location.reload()
+    //     })
+    // }
+
+
+    // const DeleteContact =(id) =>{
+    //     db.collection("notice_id").doc(id).delete().then(() => {
+    //         console.log("Document successfully deleted!");
+    //     }).catch((error) => {
+    //         console.error("Error removing document: ", error);
+    //     })
+    // }
+
+
     return (
         <div>
             <div>
@@ -120,6 +131,7 @@ export default function Try() {
                     {
                         user ? (
                             user.map((doc, i) => (
+
                                 <div key={i} style={{
                                     height: 'auto',
                                     marginLeft: '20px',
@@ -127,7 +139,16 @@ export default function Try() {
                                 }}>
                                     <img src={doc.image} className='mainProfileImg'>
                                     </img>
-                                    <button onClick={DeleteContact} >delete</button>
+                                    <button onClick={()=>{
+                                        Delete(doc.id).then(() => {
+                                            console.log('success')
+                                            message.success('Success');
+                                
+                                        }).catch(err => {
+                                            console.log(err.message)
+                                            message.error('Error');
+                                        })
+                                    }} >delete</button>
                                 </div>
                             ))
 
