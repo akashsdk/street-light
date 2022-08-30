@@ -463,7 +463,6 @@ export default function Admin() {
                                         <div className='adminRightTiteOutput'>
                                             <Link to="/try">Try korchi vai, click</Link>
                                         </div>
-
                                     </div>
                                 ) : (<></>)
                 }
