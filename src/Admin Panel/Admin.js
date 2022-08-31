@@ -278,7 +278,7 @@ export default function Admin() {
                                     <Cascader options={options} onChange={onChange} placeholder="Please select Area" />
                                     <button onClick={DeleteLight} className='adminRightTitelIconButton'>
                                         <div className='adminRightTitelIconBox'>
-                                            <FaRegTrashAlt className='adminRightTitelIcon' />
+                                            <FaRegTrashAlt className='adminRightTitelIcon2' />
                                             <p className='adminRightTitelIconP'>Delete</p>
                                         </div>
                                     </button>
@@ -450,18 +450,21 @@ export default function Admin() {
                                 // Notice Board
                                 page == 4 ? (
                                     <div className='adminRight'>
-                                        <div className='adminRightTitel'>
-                                            <h1>Notice Board</h1>
-                                            <FaRegTrashAlt className='adminRightTitelIcon' />
-                                        </div>
-
                                         <div>
-                                            <Button icon={<UploadOutlined />} className='adminUploadButton'>
-                                                Click to UpLoad
-                                            </Button>
-                                        </div>
-                                        <div className='adminRightTiteOutput'>
-                                            <Link to="/try">Try korchi vai, click</Link>
+                                            <div className='adminRightTitel'>
+                                                <h1>Notice Board</h1>
+                                                <FaRegTrashAlt className='adminRightTitelIcon' />
+                                            </div>
+
+                                            <div>
+                                                <Button icon={<UploadOutlined />} className='adminUploadButton'>
+                                                    Click to UpLoad
+                                                </Button>
+                                            </div>
+                                            <div className='adminRightTiteOutput'>
+
+                                            </div>
+                                             {/* Pagination */}
                                         </div>
                                     </div>
                                 ) : (<></>)

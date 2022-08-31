@@ -155,14 +155,7 @@ export default function Try() {
                         ) : (<></>)
                     }
 
-                    <input ref={domRef} onChange={(e) => {
-                        console.log(e.target.files)
-                        fileToDataUri(e.target.files[0]).then(url => {
-                            setFile(url)
-                        })
-
-                        upload(e.target.files[e.target.files.length - 1])
-                    }} style={{ display: 'none' }} accept='image/*' type='file' name='file'></input>
+                   
 
                 </div>
 
