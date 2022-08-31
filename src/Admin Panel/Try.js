@@ -6,10 +6,10 @@ import Loading from "../Card/Loading.js"
 
 import { getAuth, signOut } from "firebase/auth";
 import app from "../firebase";
-import { Button, Pagination,message } from 'antd';
+import { Button, Pagination, message } from 'antd';
 import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
-import { onSnapshot, doc, getFirestore, updateDoc, setDoc, query, where, deleteDoc, collection} from 'firebase/firestore';
-import { getDownloadURL, getStorage, uploadBytes, ref,deleteObject} from 'firebase/storage';
+import { onSnapshot, doc, getFirestore, updateDoc, setDoc, query, where, deleteDoc, collection } from 'firebase/firestore';
+import { getDownloadURL, getStorage, uploadBytes, ref, deleteObject } from 'firebase/storage';
 import uuid from 'react-uuid';
 
 
@@ -122,7 +122,7 @@ export default function Try() {
             <div>
                 {user ? (<></>) : (<Loading />)}
                 <button>
-                <Link  to="/*">Back</Link>
+                    <Link to="/*">Back</Link>
                 </button>
                 <button onClick={() => {
                     domRef.current.click()
@@ -139,11 +139,11 @@ export default function Try() {
                                 }}>
                                     <img src={doc.image} className='mainProfileImg'>
                                     </img>
-                                    <button onClick={()=>{
+                                    <button onClick={() => {
                                         Delete(doc.id).then(() => {
                                             console.log('success')
                                             message.success('Success');
-                                
+
                                         }).catch(err => {
                                             console.log(err.message)
                                             message.error('Error');
@@ -172,7 +172,9 @@ export default function Try() {
                 height: 'auto',
                 marginLeft: '400px',
             }}>
-                <Pagination defaultCurrent={1} total={50}  />
+                <Pagination onChange={(index, size) => {
+                    setIndex3(index - 1)
+                }} defaultCurrent={1} total={data3 ? (data3.length * 10) : ''} />
             </div>
         </div>
     )
