@@ -4,7 +4,7 @@ import {
     Button, Drawer, Radio, message,
     Col, Row, Pagination, Space, Spin, Select, Cascader
 } from 'antd';
-import { BsPower, BsPlusCircle, BsStoplights } from "react-icons/bs";
+import { BsPower, BsPlusCircle, BsStoplights} from "react-icons/bs";
 import {
     AiOutlineMenu,
     AiFillHome,
@@ -475,16 +475,16 @@ export default function Admin() {
                                         </div>
                                     </div>
                                 ) :
-                                    // "Add Light" Page
+                                // "Add Light" Page
                                     page == 5 ? (
                                         <div className='adminRight'>
                                             <div className='adminAddLight'>
                                                 <div className='adminRightTitel'>
-                                                    <BsStoplights className='adminRightTitelIcon' />
+                                                <BsStoplights className='adminRightTitelIcon' />
                                                     <h1>Add Light</h1>
                                                 </div>
                                                 <div className='adminAddLightBox'>
-                                                    <AddLight />
+                                                <AddLight/>
                                                 </div>
                                             </div>
                                         </div>
