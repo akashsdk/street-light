@@ -1,10 +1,9 @@
 import React from 'react'
 import ProfilePhoto from "../Image/Pfofilephoto.jpeg"
-import { AiOutlinePaperClip, AiOutlineLogout, AiFillEdit } from "react-icons/ai";
 import Loading from "../Card/Loading.js"
 
 
-import { getAuth, signOut } from "firebase/auth";
+import { getAuth } from "firebase/auth";
 import app from "../firebase";
 import { Button, Pagination, message } from 'antd';
 import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
