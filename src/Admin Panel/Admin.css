@@ -61,6 +61,22 @@
     align-items: center;
     flex-direction: column;
 }
+.adminAddLight{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.adminAddLightBox{
+    margin-top: -150px;
+}
+.adminRightdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .adminLeftButton{
     background-color: transparent;
     border: none;
@@ -135,7 +151,7 @@
 .adminRightTitelIcon{
     font-size: 20px;
     margin: 10px;
-    margin-top: -6px;
+    margin-top: -4px;
 }
 .adminRightTitelIcon:hover{
     color: #3fa46a;

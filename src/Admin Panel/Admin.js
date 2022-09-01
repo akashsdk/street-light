@@ -4,7 +4,7 @@ import {
     Button, Drawer, Radio, message,
     Col, Row, Pagination, Space, Spin, Select, Cascader
 } from 'antd';
-import { BsPower } from "react-icons/bs";
+import { BsPower, BsPlusCircle, BsStoplights } from "react-icons/bs";
 import {
     AiOutlineMenu,
     AiFillHome,
@@ -13,8 +13,9 @@ import {
     AiFillExclamationCircle
 } from "react-icons/ai";
 
-import Loading from "../Card/Loading"
-import Notfound from "./Notfound.js"
+import Loading from "../Card/Loading";
+import Notfound from "./Notfound.js";
+import AddLight from "../screen/AddLight"
 import { FaRegTrashAlt } from "react-icons/fa";
 import {
     HomeOutlined,
@@ -267,19 +268,25 @@ export default function Admin() {
 
                 </div>
                 {
-                    //Street Light
+                    // "Street Light" Page
                     page == 1 ? (
                         data2 ? (
                             <div className='adminRight'>
                                 <div className='adminRightTitel'>
                                     <h1>Street Light</h1>
+                                    <FaRegTrashAlt onClick={DeleteLight} className='adminRightTitelIcon' />
                                 </div>
                                 <div className='adminRightTitelIconDiv'>
                                     <Cascader options={options} onChange={onChange} placeholder="Please select Area" />
-                                    <button onClick={DeleteLight} className='adminRightTitelIconButton'>
+                                    <button onClick={() => {
+                                        const hide = message.loading('Street Light', 0);
+                                        setTimeout(hide, 1000);
+                                        setPage(5);
+                                    }}
+                                        className='adminRightTitelIconButton'>
                                         <div className='adminRightTitelIconBox'>
-                                            <FaRegTrashAlt className='adminRightTitelIcon2' />
-                                            <p className='adminRightTitelIconP'>Delete</p>
+                                            <BsPlusCircle className='adminRightTitelIcon2' />
+                                            <p className='adminRightTitelIconP'>Add Light</p>
                                         </div>
                                     </button>
                                 </div>
@@ -344,7 +351,7 @@ export default function Admin() {
                             </div>
                         ) : (<Loading />)
                     ) :
-                        // User Complen
+                        // "User Complen" Page
                         page == 2 ? (
                             <div className='adminRight'>
                                 <div className='adminRightTitel'>
@@ -406,7 +413,7 @@ export default function Admin() {
 
                             </div>
                         ) :
-                            // Contact Us
+                            // "Contact Us" Page
                             page == 3 ? (
                                 <div className='adminRight'>
                                     <div className='adminRightTitel'>
@@ -447,16 +454,16 @@ export default function Admin() {
 
                                 </div>
                             ) :
-                                // Notice Board
+                                // "Notice Board" Page
                                 page == 4 ? (
                                     <div className='adminRight'>
-                                        <div>
+                                        <div >
                                             <div className='adminRightTitel'>
                                                 <h1>Notice Board</h1>
                                                 <FaRegTrashAlt className='adminRightTitelIcon' />
                                             </div>
 
-                                            <div>
+                                            <div className='adminRightdiv'>
                                                 <Button icon={<UploadOutlined />} className='adminUploadButton'>
                                                     Click to UpLoad
                                                 </Button>
@@ -464,10 +471,27 @@ export default function Admin() {
                                             <div className='adminRightTiteOutput'>
 
                                             </div>
-                                             {/* Pagination */}
+                                            {/* Pagination */}
                                         </div>
                                     </div>
-                                ) : (<></>)
+                                ) :
+                                    // "Add Light" Page
+                                    page == 5 ? (
+                                        <div className='adminRight'>
+                                            <div className='adminAddLight'>
+                                                <div className='adminRightTitel'>
+                                                    <BsStoplights className='adminRightTitelIcon' />
+                                                    <h1>Add Light</h1>
+                                                </div>
+                                                <div className='adminAddLightBox'>
+                                                    <AddLight />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ) : (<></>)
+
+
+
                 }
             </div>
         </div>

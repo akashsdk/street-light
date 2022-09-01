@@ -5,8 +5,6 @@ import { BsFillCloudSlashFill } from "react-icons/bs";
 
 
 
-
-
 export default function Notfound(props) {
     return (
         <div style={{
