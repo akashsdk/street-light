@@ -130,32 +130,36 @@ export default function Try() {
                 <div className='mainProfileImgDiv'>
                     {
                         user ? (
-                            user.map((doc, i) => (
+                            <div style={{
+                                height: 'auto',
+                                marginLeft: '20px',
+                                marginTop: '50px'
+                            }}>
+                                <img src={user[index3].image} className='mainProfileImg'>
+                                </img>
+                                <button onClick={() => {
+                                    Delete(user[index3].id).then(() => {
+                                        console.log('success')
+                                        message.success('Success');
 
-                                <div key={i} style={{
-                                    height: 'auto',
-                                    marginLeft: '20px',
-                                    marginTop: '50px'
-                                }}>
-                                    <img src={doc.image} className='mainProfileImg'>
-                                    </img>
-                                    <button onClick={() => {
-                                        Delete(doc.id).then(() => {
-                                            console.log('success')
-                                            message.success('Success');
-
-                                        }).catch(err => {
-                                            console.log(err.message)
-                                            message.error('Error');
-                                        })
-                                    }} >delete</button>
-                                </div>
-                            ))
+                                    }).catch(err => {
+                                        console.log(err.message)
+                                        message.error('Error');
+                                    })
+                                }} >delete</button>
+                            </div>
 
                         ) : (<></>)
                     }
 
-                   
+                    <input ref={domRef} onChange={(e) => {
+                        console.log(e.target.files)
+                        fileToDataUri(e.target.files[0]).then(url => {
+                            setFile(url)
+                        })
+
+                        upload(e.target.files[e.target.files.length - 1])
+                    }} style={{ display: 'none' }} accept='image/*' type='file' name='file'></input>
 
                 </div>
 
