@@ -206,9 +206,15 @@
     width: 700px;
     background-color: transparent;
     margin-top: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 1px 1px 10px #3fa46a;;
+}
+
+
+.adminRightTiteOutputBox{
+    height: 345px;
+    width: 695px;
 }

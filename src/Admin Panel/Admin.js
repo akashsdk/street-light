@@ -16,6 +16,7 @@ import {
 import Loading from "../Card/Loading";
 import Notfound from "./Notfound.js";
 import AddLight from "../screen/AddLight"
+import Notice from './Notice';
 import { FaRegTrashAlt } from "react-icons/fa";
 import {
     HomeOutlined,
@@ -279,7 +280,7 @@ export default function Admin() {
                                 <div className='adminRightTitelIconDiv'>
                                     <Cascader options={options} onChange={onChange} placeholder="Please select Area" />
                                     <button onClick={() => {
-                                        const hide = message.loading('Street Light', 0);
+                                        const hide = message.loading('Adding Light', 0);
                                         setTimeout(hide, 1000);
                                         setPage(5);
                                     }}
@@ -456,24 +457,8 @@ export default function Admin() {
                             ) :
                                 // "Notice Board" Page
                                 page == 4 ? (
-                                    <div className='adminRight'>
-                                        <div >
-                                            <div className='adminRightTitel'>
-                                                <h1>Notice Board</h1>
-                                                <FaRegTrashAlt className='adminRightTitelIcon' />
-                                            </div>
-
-                                            <div className='adminRightdiv'>
-                                                <Button icon={<UploadOutlined />} className='adminUploadButton'>
-                                                    Click to UpLoad
-                                                </Button>
-                                            </div>
-                                            <div className='adminRightTiteOutput'>
-
-                                            </div>
-                                            {/* Pagination */}
-                                        </div>
-                                    </div>
+                                    <Notice ></Notice>
+                                    
                                 ) :
                                 // "Add Light" Page
                                     page == 5 ? (
