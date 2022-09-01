@@ -22,7 +22,7 @@ export default function Profile(props) {
   const logout = () => {
     signOut(auth).then(() => {
       // Sign-out successful.
-      window.location.reload()
+      window.location.href='/'
     }).catch((error) => {
       // An error happened.
     });

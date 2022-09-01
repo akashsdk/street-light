@@ -8,7 +8,7 @@ import { Button, message } from 'antd';
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
 
-import { getAuth, updatePassword } from "firebase/auth";
+import { getAuth, updatePassword, signInWithEmailAndPassword } from "firebase/auth";
 import app from "../firebase";
 export default function ChangePassword() {
     const [hide0, setHide0] = React.useState(true);
@@ -17,24 +17,21 @@ export default function ChangePassword() {
     const [d1, setD1] = React.useState();
     const [d2, setD2] = React.useState();
     const [password, oldPassword] = React.useState();
-
-
-
-    // Firestore
     const auth = getAuth(app);
-    // const user = auth.currentUser;
-    // const newPassword = getASecureRandomPassword();
 
-    // updatePassword(user, newPassword).then(() => {
-    //     // Update successful.
-    // }).catch((error) => {
-    //     // An error ocurred
-    //     // ...
-    // });
+    const user = auth.currentUser;
 
-
-
-
+    const update = () => {
+        signInWithEmailAndPassword(auth, user.email, password).then((userCredintial) => {
+            updatePassword(userCredintial.user, d1).then(() => {
+                message.success('Password is updated.')
+            }).catch((error) => {
+                message.error(error.code)
+            });
+        }).catch((error) => {
+            message.warning('Invalid Old Password')
+        });
+    }
 
 
     return (
@@ -61,7 +58,7 @@ export default function ChangePassword() {
                 <h2 className="changeh2">New Password <AiFillStar className="changeStarIcon" /></h2>
                 <div className="changeInputDiv">
                     <input onChange={e => setD1(e.target.value)}
-                      type={hide1 ? "password" : 'text'} className="changeInput" placeholder="New Password" />
+                        type={hide1 ? "password" : 'text'} className="changeInput" placeholder="New Password" />
                     <a style={{
                         textDecoration: 'none'
                     }} onClick={() => setHide1(!hide1)}>
@@ -73,8 +70,8 @@ export default function ChangePassword() {
 
                 <h2 className="changeh2"> Confirm Password <AiFillStar className="changeStarIcon" /></h2>
                 <div className="changeInputDiv">
-                    <input onChange={e => setD2(e.target.value)} 
-                      type={hide2 ? "password" : 'text'} className="changeInput" placeholder="Confirm Password" />
+                    <input onChange={e => setD2(e.target.value)}
+                        type={hide2 ? "password" : 'text'} className="changeInput" placeholder="Confirm Password" />
                     <a style={{
                         textDecoration: 'none'
                     }} onClick={() => setHide2(!hide2)}>
@@ -87,12 +84,11 @@ export default function ChangePassword() {
                 <button type="submit" className="chanheSubmit"
                     onClick={() => {
                         if (d1 == d2) {
-                            message.success('Success');
-                            return ;
-
+                            update();
+                            return;
                         }
                         if (d1 != d2)
-                        message.error('Password DoseNot Match');
+                            message.error('Password DoseNot Match');
                         return 0;
 
                     }}>
