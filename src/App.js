@@ -22,17 +22,17 @@ import Try from './Admin Panel/Try';
 import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 //import AnimatedCursor from "react-animated-cursor"
 import app from './firebase'
-import { getAuth,onAuthStateChanged } from "firebase/auth";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 
 
 function App() {
-  const [name,setName]=React.useState('Akash')
-  const [userName,setEmail]=React.useState('User Id')
-  const [user,setUser]=React.useState(null)
+  const [name, setName] = React.useState('Akash')
+  const [userName, setEmail] = React.useState('User Id')
+  const [user, setUser] = React.useState(null)
   const auth = getAuth(app);
 
-  React.useEffect(()=>{
+  React.useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user)
@@ -45,47 +45,47 @@ function App() {
         setUser('ok')
       }
     });
-  },[])
-  
-  if(!user){
-    return(
+  }, [])
+
+  if (!user) {
+    return (
       <Loading />
     )
   }
 
-  if(user=='ok'){
-    return(
-      <LogIn setName={setEmail}/>
+  if (user == 'ok') {
+    return (
+      <LogIn setName={setEmail} />
     )
   }
-  if(user && user.email=='tasnim.s.akash@gmail.com'){
-    return(
+  if (user && user.email == 'tasnim.s.akash@gmail.com') {
+    return (
       <BrowserRouter>
-      <Routes>
+        <Routes>
           <Route path="/*" element={<Admin />} />
           <Route path="/Try" element={<Try />} />
-          <Route path="*" element={<Notfound NotfoundText="Page Not Found"/>} />
+          <Route path="*" element={<Notfound NotfoundText="Page Not Found" />} />
         </Routes>
-        </BrowserRouter>
+      </BrowserRouter>
     )
   }
 
-  
+
 
   return (
     <BrowserRouter>
       <div className="App">
 
-        <Header name={name}/>
+        <Header name={name} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/System" element={<System />} />
           <Route path="/AddLight" element={<AddLight />} />
           <Route path="/About" element={<About />} />
           <Route path="/Contact" element={<Contact />} />
-          <Route path="/Profile" element={<Profile setName={setName} name2={userName}/>} />
-          <Route path="/ChangePassword" element={<ChangePassword  />} />
-          <Route path='/Loading' element={<Loading />}  />
+          <Route path="/Profile" element={<Profile setName={setName} name2={userName} />} />
+          <Route path="/ChangePassword" element={<ChangePassword />} />
+          <Route path='/Loading' element={<Loading />} />
           <Route path='/HeplLine' element={<HeplLine />} />
           <Route path='/MainProfile' element={<MainProfile />} />
           <Route path="*" element={<Notfound NotfoundText="Page Not Found" />} />
