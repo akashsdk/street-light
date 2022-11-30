@@ -40,6 +40,7 @@ export default function Index() {
       </div>
 
       <div className='indecLineDive'></div>
+      <div></div>
 
 
       <div className='indecNoticeDiv'>
