@@ -3,6 +3,7 @@ import "./Index.css";
 import ImgMani from "../Image/StreetMaintenance.jpeg";
 import CircuitDesign from "../Image/CircuitDesign.png";
 import Gallery from "../Card/Gallery.js";
+import NoticeBoard from "./NoticeBoard";
 
 import { Col, Row, Pagination } from "antd";
 
@@ -49,8 +50,9 @@ export default function Index() {
 
       <div className="indecLineDive"></div>
       <div>
-        <p className="indecNoticeText">this website is under maintenance 🥴</p>
+        <p style={{color:'black', fontSize:'25px'}}>this website is under maintenance 🥴</p>
       </div>
+      <NoticeBoard />
 
       <div className="indecNoticeDiv">
         <h5>Notice Board</h5>
