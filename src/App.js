@@ -83,11 +83,11 @@ function App() {
           <Route path="/AddLight" element={<AddLight />} />
           <Route path="/About" element={<About />} />
           <Route path="/Contact" element={<Contact />} />
-          <Route path="/Profile" element={<Profile setName={setName} name2={userName} />} />
+          <Route path="/EditProfile" element={<Profile setName={setName} name2={userName} />} />
           <Route path="/ChangePassword" element={<ChangePassword />} />
           <Route path='/Loading' element={<Loading />} />
           <Route path='/HeplLine' element={<HeplLine />} />
-          <Route path='/MainProfile' element={<MainProfile />} />
+          <Route path='/Profile' element={<MainProfile />} />
           <Route path="*" element={<Notfound NotfoundText="Page Not Found" />} />
         </Routes>
         <Footer />

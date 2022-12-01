@@ -22,7 +22,7 @@ export default function Header(props) {
           />
             <img src={Logo} className='headerDivUpImege'/>
 
-          <Link className='headerButtonLink' to="/MainProfile">
+           <Link className='headerButtonLink' to="/Profile"> {/* MainProfile */}
             <button className='headerButton' >
               <AiOutlineUser className='headerIcon' />
               <p>{props.name}</p>

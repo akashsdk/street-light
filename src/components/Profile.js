@@ -101,8 +101,7 @@ export default function Profile(props) {
 
 
         <Button type="link" className="profileForgetButton" danger>
-
-          <Link to="/MainProfile">Go Back</Link>
+           <Link to="/Profile">Go Back</Link> {/* Main Profile */}
         </Button>
 
         <Button type="link" className="profileForgetButton" danger>

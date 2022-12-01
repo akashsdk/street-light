@@ -90,7 +90,7 @@ export default function MainProfile(props) {
                 </Button>
 
                 <h1 className='mainProfileTitel'>Edit Profile</h1>
-                <Link to="/Profile">
+                <Link to="/EditProfile">  {/* Profile */}
                     <AiFillEdit className='mainProfileTitelIcon' />
                 </Link>
 
