@@ -3,16 +3,18 @@ import "./Index.css";
 import { Col, Row, Pagination } from "antd";
 
 export default function NoticeBoard() {
-    const [page, setPage] = React.useState(1);
+  const [page, setPage] = React.useState(1);
   return (
     <div>
       <div className="indecNoticeDiv">
         <h5>Notice Board</h5>
         <div className="indecNoticeBox">
           {page == 1 ? (
-            <p className="indecNoticeText">
-              this website is under maintenance 🥴
-            </p>
+            <div>
+              <p className="indecNoticeText">
+                this website is under maintenance 🥴
+              </p>
+            </div>
           ) : page == 2 ? (
             <p className="indecNoticeText">upcoming notice 1</p>
           ) : page == 3 ? (
