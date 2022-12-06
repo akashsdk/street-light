@@ -4,7 +4,7 @@ import "./NoticeBoard.css";
 export default function NoticeBoard() {
    
   return (
-    <div>
+    <div className="noticeBody">
       NoticeBoard
     </div>
   );
