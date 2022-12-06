@@ -1,6 +1,8 @@
 import React from "react";
 import "./Index.css";
+import "./NoticeBoard.css";
 import { Col, Row, Pagination } from "antd";
+import ImgMani from "../Image/StreetMaintenance.jpeg";
 
 export default function NoticeBoard() {
   const [page, setPage] = React.useState(1);
@@ -11,8 +13,8 @@ export default function NoticeBoard() {
         <div className="indecNoticeBox">
           {page == 1 ? (
             <div>
-              <p className="indecNoticeText">
-                this website is under maintenance 🥴
+              <p >
+              <img src={ImgMani}  className="NoticeBoardImg"/>
               </p>
             </div>
           ) : page == 2 ? (
