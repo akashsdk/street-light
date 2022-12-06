@@ -1,24 +1,20 @@
 import React from "react";
 import "./Index.css";
-import "./NoticeBoard.css";
 import { Col, Row, Pagination } from "antd";
-import ImgMani from "../Image/StreetMaintenance.jpeg";
 
 export default function NoticeBoard() {
-  const [page, setPage] = React.useState(1);
+    const [page, setPage] = React.useState(1);
   return (
     <div>
       <div className="indecNoticeDiv">
         <h5>Notice Board</h5>
         <div className="indecNoticeBox">
           {page == 1 ? (
-            <div>
-              <p >
-              <img src={ImgMani}  className="NoticeBoardImg"/>
-              </p>
-            </div>
+            <p className="indecNoticeText">
+              this website is under maintenance 
+            </p>
           ) : page == 2 ? (
-            <p className="indecNoticeText">upcoming notice 1</p>
+            <p className="indecNoticeText">upcoming Messages 1</p>
           ) : page == 3 ? (
             <p className="indecNoticeText">upcoming notice 2</p>
           ) : page == 4 ? (

@@ -4,6 +4,7 @@ import ImgMani from "../Image/StreetMaintenance.jpeg";
 import CircuitDesign from "../Image/CircuitDesign.png";
 import Gallery from "../Card/Gallery.js";
 import NoticeBoard from "./NoticeBoard";
+import Messages from "./Messages";
 
 import { Col, Row, Pagination } from "antd";
 
@@ -47,6 +48,10 @@ export default function Index() {
         <Gallery />
       </div>
 
+      <div className="indecLineDive"></div>
+
+      <Messages />
+      
       <div className="indecLineDive"></div>
       
       <NoticeBoard />
