@@ -5,7 +5,7 @@ export default function NoticeBoard() {
    
   return (
     <div className="noticeBody">
-      NoticeBoard
+      <p className="noticeHedertext">Notice Board</p>
     </div>
   );
 }
