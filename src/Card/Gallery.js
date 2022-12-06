@@ -75,7 +75,27 @@ export default function Gallery() {
 
     return (
         <div className='gallerBody'>
-            
+            <Upload style={{
+                width: '350px',
+                height: '350px'
+            }}
+                action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+                listType="picture-card"
+                fileList={fileList}
+                onPreview={handlePreview}
+                onChange={handleChange}
+            >
+                {fileList.length >= 10 ? null : uploadButton}
+            </Upload>
+            <Modal visible={previewVisible} title={previewTitle} footer={null} onCancel={handleCancel}>
+                <img
+                    alt="example"
+                    style={{
+                        width: '100%',
+                    }}
+                    src={previewImage}
+                />
+            </Modal>
         </div>
     )
 }
