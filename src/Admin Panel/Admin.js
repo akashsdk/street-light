@@ -246,7 +246,8 @@ export default function Admin() {
               style={{ color: page == 1 ? "rgb(69, 162, 92)" : "black" }}
             />
             <p className="adminLeftButtonText">Street Light </p>
-            {page == 1 ? <div className="adminLeftButtonLine" /> : <></>}
+            {page == 1 ? <div className="adminLeftButtonLine" 
+            style={{ marginLeft:'90px'}}/> : <></>}
             
           </button>
 
@@ -261,6 +262,8 @@ export default function Admin() {
             <AiFillExclamationCircle className="adminLeftButtonIcon" 
             style={{ color: page == 2 ? "rgb(69, 162, 92)" : "black" }}/>
             <p className="adminLeftButtonText"> User Complen </p>
+            {page == 2 ? <div className="adminLeftButtonLine" 
+            style={{ marginLeft:'67px'}}/> : <></>}
           </button>
 
           <button
@@ -274,6 +277,8 @@ export default function Admin() {
             <BsFillChatRightTextFill className="adminLeftButtonIcon" 
             style={{ color: page == 3 ? "rgb(69, 162, 92)" : "black" }}/>
             <p className="adminLeftButtonText"> Contact </p>
+            {page == 3 ? <div className="adminLeftButtonLine" 
+            style={{ marginLeft:'121px'}} /> : <></>}
           </button>
 
           <button
@@ -287,6 +292,8 @@ export default function Admin() {
             <BsFillPencilFill className="adminLeftButtonIcon" 
             style={{ color: page == 4 ? "rgb(69, 162, 92)" : "black" }}/>
             <p className="adminLeftButtonText"> Notice Board </p>
+            {page == 4 ? <div className="adminLeftButtonLine" 
+            style={{ marginLeft:'78px'}} /> : <></>}
           </button>
         </div>
         {
