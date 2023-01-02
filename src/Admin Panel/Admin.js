@@ -233,7 +233,8 @@ export default function Admin() {
                         setTimeout(hide, 1000);
                         setPage(1);
                     }} className='adminLeftButton' >
-                        <AiFillBulb className='adminLeftButtonIcon' />
+                        
+                        <AiFillBulb className='adminLeftButtonIcon' style={{ color: page == 1 ?  'rgb(69, 162, 92)' : 'black' }}/>
                         <p className='adminLeftButtonText'>Street Light </p>
                     </button>
 
@@ -274,7 +275,7 @@ export default function Admin() {
                         data2 ? (
                             <div className='adminRight'>
                                 <div className='adminRightTitel'>
-                                    <h1>Street Light</h1>
+                                    <h1 >Street Light</h1>
                                     <FaRegTrashAlt onClick={DeleteLight} className='adminRightTitelIcon' />
                                 </div>
                                 <div className='adminRightTitelIconDiv'>
