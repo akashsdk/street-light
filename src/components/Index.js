@@ -42,15 +42,10 @@ export default function Index() {
         <p className="indexFistP">street light circuit design</p>
         <img src={CircuitDesign} className="indexImgeCircuit" />
       </div>
-      <div className="indecLineDive"></div>
 
-      <div className="indecGalleryBox">
-        <Gallery />
-      </div>
 
-      <div className="indecLineDive"></div>
-
-      <Messages />
+      {/* <div className="indecLineDive"></div>
+      <Messages /> */}
       
       <div className="indecLineDive"></div>
       

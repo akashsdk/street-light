@@ -6,6 +6,9 @@ export default function NoticeBoard() {
   return (
     <div className="noticeBody">
       <p className="noticeHedertext">Notice Board</p>
+      <div>
+        <div className="noticeBoxLine"/>
+      </div>
     </div>
   );
 }
