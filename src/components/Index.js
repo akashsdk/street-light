@@ -52,7 +52,7 @@ export default function Index() {
       <NoticeBoard />
 
       <div>
-        <p style={{color:'black', fontSize:'25px'}}>this website is under maintenance 🥴</p>
+        <p style={{color:'black', fontSize:'25px'}}>this website is under maintenance !!</p>
       </div>
 
       
