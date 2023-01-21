@@ -1,7 +1,7 @@
 import React from "react";
 import "./NoticeBoard.css";
 
-import { Pagination } from "antd";
+import { Pagination, Result } from "antd";
 import { useState } from "react";
 
 export default function NoticeBoard() {
@@ -25,17 +25,32 @@ export default function NoticeBoard() {
         ) : page == 2 ? (
           <div className="noticeBoxBody">upcoming Messages 1</div>
         ) : page == 3 ? (
-          <div className="noticeBoxBody">upcoming Messages 1</div>
+          <div className="noticeBoxBody">upcoming Messages 2</div>
         ) : page == 4 ? (
-          <div className="noticeBoxBody">upcoming Messages 1</div>
+          <div className="noticeBoxBody">upcoming Messages 3</div>
         ) : page == 5 ? (
-          <div className="noticeBoxBody">upcoming Messages 1</div>
+          <div className="noticeBoxBody"><Result
+          status="warning"
+          title="There are some problems with your operation."
+          
+        /></div>
         ) : (
-          <p className="">Error</p>
+          <div>
+            <Result
+              status="warning"
+              title="There are some problems with your operation."
+              
+            />
+          </div>
         )}
 
         <div className="noticeBoxLine" />
-        <Pagination current={current} onChange={onChange} total={50} className='noticePagination'/>
+        <Pagination
+          current={current}
+          onChange={onChange}
+          total={50}
+          className="noticePagination"
+        />
       </div>
     </div>
   );
