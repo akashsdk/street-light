@@ -20,21 +20,23 @@ export default function NoticeBoard() {
       <div>
         <div className="noticeBoxLine" />
 
-        <div className="noticeBoxBody">akashhg</div>
+        
+        <div className="noticeBoxBody">this website is under maintenance</div>
+        <div className="noticeBoxBody">upcoming Messages 1</div>
 
-        {/* {page == 1 ? (
-          <p className="">this website is under maintenance</p>
+        {page == 1 ? (
+          <div className="noticeBoxBody">this website is under maintenance</div>
         ) : page == 2 ? (
-          <p className="">upcoming Messages 1</p>
+          <div className="noticeBoxBody">upcoming Messages 1</div>
         ) : page == 3 ? (
-          <p className="">upcoming notice 2</p>
+          <div className="noticeBoxBody">upcoming Messages 1</div>
         ) : page == 4 ? (
-          <p className="">upcoming notice 3</p>
+          <div className="noticeBoxBody">upcoming Messages 1</div>
         ) : page == 5 ? (
-          <p className="">upcoming notice 4</p>
+          <div className="noticeBoxBody">upcoming Messages 1</div>
         ) : (
           <p className="">Error</p>
-        )} */}
+        )}
 
         <div className="noticeBoxLine" />
         <Pagination current={current} onChange={onChange} total={50} className='noticePagination'/>
