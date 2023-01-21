@@ -20,10 +20,6 @@ export default function NoticeBoard() {
       <div>
         <div className="noticeBoxLine" />
 
-        
-        <div className="noticeBoxBody">this website is under maintenance</div>
-        <div className="noticeBoxBody">upcoming Messages 1</div>
-
         {page == 1 ? (
           <div className="noticeBoxBody">this website is under maintenance</div>
         ) : page == 2 ? (
