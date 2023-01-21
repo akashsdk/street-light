@@ -29,14 +29,9 @@ export default function NoticeBoard() {
         ) : page == 4 ? (
           <div className="noticeBoxBody">upcoming Messages 3</div>
         ) : page == 5 ? (
-          <div className="noticeBoxBody"><div style={{marginTop:'70px'}}>
-          <Result
-            status="warning"
-            title="There are some problems with your operation."
-          />
-        </div></div>
+          <div className="noticeBoxBody">upcoming Messages 4</div>
         ) : (
-          <div style={{marginTop:'50px'}}>
+          <div style={{marginTop:'70px'}}>
             <Result
               status="warning"
               title="There are some problems with your operation."
