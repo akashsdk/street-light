@@ -21,6 +21,9 @@
 
 .noticeBoxBody{
     height: 475px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
 }
 
 .noticePagination{
