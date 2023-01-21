@@ -12,9 +12,7 @@ export default function NoticeBoard() {
     console.log(page);
     setCurrent(page);
     setPage(page);
-
   };
-
 
   return (
     <div className="noticeBody">
@@ -36,9 +34,8 @@ export default function NoticeBoard() {
           <p className="">Error</p>
         )}
 
-        <Pagination 
-        
-         current={current} onChange={onChange} total={50} />
+        <div className="noticeBoxLine" />
+        <Pagination current={current} onChange={onChange} total={50} className=''/>
       </div>
     </div>
   );
