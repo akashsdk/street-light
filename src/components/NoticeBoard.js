@@ -20,7 +20,9 @@ export default function NoticeBoard() {
       <div>
         <div className="noticeBoxLine" />
 
-        {page == 1 ? (
+        <div className="noticeBoxBody">akashhg</div>
+
+        {/* {page == 1 ? (
           <p className="">this website is under maintenance</p>
         ) : page == 2 ? (
           <p className="">upcoming Messages 1</p>
@@ -32,10 +34,10 @@ export default function NoticeBoard() {
           <p className="">upcoming notice 4</p>
         ) : (
           <p className="">Error</p>
-        )}
+        )} */}
 
         <div className="noticeBoxLine" />
-        <Pagination current={current} onChange={onChange} total={50} className=''/>
+        <Pagination current={current} onChange={onChange} total={50} className='noticePagination'/>
       </div>
     </div>
   );

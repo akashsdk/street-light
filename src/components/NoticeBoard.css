@@ -6,13 +6,23 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: 2px solid #3fa46a;
 }
+
 .noticeHedertext{
     font-size: 30px;
     margin-top: 10px;
 }
+
 .noticeBoxLine{
     height: 3px;
     width: 100%;
     margin-top: -20px;
     background-color: #3fa46a;
+}
+
+.noticeBoxBody{
+    height: 475px;
+}
+
+.noticePagination{
+    margin-top: 18px;
 }
