@@ -23,8 +23,8 @@ export default function NoticeBoard() {
         <div className="noticeBoxBody">
           ddd
         </div>
-
-        {/* {page == 1 ? (
+{/* 
+        {page == 1 ? (
           <div className="noticeBoxBody">this website is under maintenance</div>
         ) : page == 2 ? (
           <div className="noticeBoxBody">upcoming Messages 1</div>
