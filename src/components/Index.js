@@ -5,6 +5,9 @@ import CircuitDesign from "../Image/CircuitDesign.png";
 import Gallery from "../Card/Gallery.js";
 import NoticeBoard from "./NoticeBoard";
 import Messages from "./Messages";
+import Calender from "../Card/Calender";
+
+
 
 import { Col, Row, Pagination } from "antd";
 
@@ -50,6 +53,8 @@ export default function Index() {
       <div className="indecLineDive"></div>
       
       <NoticeBoard />
+
+      <Calender/>
 
       <div>
         <p style={{color:'black', fontSize:'25px'}}>this website is under maintenance !!</p>
