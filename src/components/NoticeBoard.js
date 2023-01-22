@@ -1,13 +1,21 @@
 import React from "react";
 import "./NoticeBoard.css";
 
-import { Pagination, Result, Image, Space, Spin, FloatButton, Calendar } from "antd";
+import {
+  Pagination,
+  Result,
+  Image,
+  Space,
+  Spin,
+  FloatButton,
+  Calendar,
+} from "antd";
 
 import { useState } from "react";
 
 export default function NoticeBoard() {
-  const [current, setCurrent] = useState(2);
-  const [page, setPage] = useState(2);
+  const [current, setCurrent] = useState(3);
+  const [page, setPage] = useState(3);
 
   const [visible, setVisible] = useState(false);
 
@@ -18,10 +26,10 @@ export default function NoticeBoard() {
   };
 
   const onPanelChange = (value, mode) => {
-    console.log(value.format('YYYY-MM-DD'), mode);
+    console.log(value.format("YYYY-MM-DD"), mode);
   };
   const wrapperStyle = {
-    width: '40%',
+    width: "40%",
     borderRadius: 4,
     marginTop: 50,
   };
@@ -54,8 +62,22 @@ export default function NoticeBoard() {
         ) : page == 2 ? (
           // Calendar
           <div className="noticeBoxBody">
+            <div className="noticeBoxDiv1">
+              <Space size="middle">
+                <Spin size="large" />
+              </Space>
+            </div>
+            <div style={{ width: "150px" }} />
+
             <div style={wrapperStyle}>
-            <Calendar fullscreen={false} onPanelChange={onPanelChange} />
+              <Calendar fullscreen={false} onPanelChange={onPanelChange} />
+            </div>
+
+            <div style={{ width: "150px" }} />
+            <div className="noticeBoxDiv1">
+              <Space size="middle">
+                <Spin size="large" />
+              </Space>
             </div>
           </div>
         ) : page == 3 ? (
