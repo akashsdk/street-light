@@ -21,7 +21,9 @@ export default function NoticeBoard() {
         <div className="noticeBoxLine" />
 
         <div className="noticeBoxBody">
-          ddd
+          <div className="noticeBoxDiv">akash</div>
+          <div style={{width:'10%'}}/>
+          <div className="noticeBoxDiv">akkk</div>
         </div>
 {/* 
         {page == 1 ? (

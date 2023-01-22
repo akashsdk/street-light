@@ -29,3 +29,13 @@
 .noticePagination{
     margin-top: 18px;
 }
+
+.noticeBoxDiv{
+    height: 400px;
+    width: auto;
+    background-color: aquamarine;
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
