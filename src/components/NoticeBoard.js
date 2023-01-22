@@ -6,8 +6,8 @@ import { Pagination, Result, Image, Space, Spin, FloatButton, Calendar } from "a
 import { useState } from "react";
 
 export default function NoticeBoard() {
-  const [current, setCurrent] = useState(3);
-  const [page, setPage] = useState(3);
+  const [current, setCurrent] = useState(2);
+  const [page, setPage] = useState(2);
 
   const [visible, setVisible] = useState(false);
 
@@ -17,14 +17,22 @@ export default function NoticeBoard() {
     setPage(page);
   };
 
-  
+  const onPanelChange = (value, mode) => {
+    console.log(value.format('YYYY-MM-DD'), mode);
+  };
+  const wrapperStyle = {
+    width: '40%',
+    borderRadius: 4,
+    marginTop: 50,
+  };
 
   return (
     <div className="noticeBody">
       {page == 1 ? (
         <p className="noticeHedertext">Notice Board1</p>
       ) : page == 2 ? (
-        <p className="noticeHedertext">Notice Board2</p>
+        // Calendar
+        <p className="noticeHedertext">Calendar</p>
       ) : page == 3 ? (
         // Notice Board
         <p className="noticeHedertext">Notice Board</p>
@@ -44,7 +52,11 @@ export default function NoticeBoard() {
         {page == 1 ? (
           <div className="noticeBoxBody">this website is under maintenance</div>
         ) : page == 2 ? (
+          // Calendar
           <div className="noticeBoxBody">
+            <div style={wrapperStyle}>
+            <Calendar fullscreen={false} onPanelChange={onPanelChange} />
+            </div>
           </div>
         ) : page == 3 ? (
           // Notice Board

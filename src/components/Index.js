@@ -53,7 +53,6 @@ export default function Index() {
       
       <NoticeBoard />
 
-      <Calender/>
 
       <div>
         <p style={{color:'black', fontSize:'25px'}}>this website is under maintenance !!</p>
