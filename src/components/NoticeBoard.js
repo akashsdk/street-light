@@ -1,7 +1,7 @@
 import React from "react";
 import "./NoticeBoard.css";
 
-import { Pagination, Result, Image, Space, Spin, FloatButton, } from "antd";
+import { Pagination, Result, Image, Space, Spin, FloatButton, Calendar } from "antd";
 
 import { useState } from "react";
 
@@ -16,6 +16,8 @@ export default function NoticeBoard() {
     setCurrent(page);
     setPage(page);
   };
+
+  
 
   return (
     <div className="noticeBody">
@@ -43,7 +45,6 @@ export default function NoticeBoard() {
           <div className="noticeBoxBody">this website is under maintenance</div>
         ) : page == 2 ? (
           <div className="noticeBoxBody">
-            upcoming Messages 2
           </div>
         ) : page == 3 ? (
           // Notice Board
