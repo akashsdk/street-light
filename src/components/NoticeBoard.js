@@ -1,12 +1,14 @@
 import React from "react";
 import "./NoticeBoard.css";
 
-import { Pagination, Result } from "antd";
+import { Pagination, Result, Image } from "antd";
 import { useState } from "react";
 
 export default function NoticeBoard() {
   const [current, setCurrent] = useState(3);
   const [page, setPage] = useState(3);
+
+  const [visible, setVisible] = useState(false);
 
   const onChange = (page) => {
     console.log(page);
@@ -21,11 +23,41 @@ export default function NoticeBoard() {
         <div className="noticeBoxLine" />
 
         <div className="noticeBoxBody">
-          <div className="noticeBoxDiv">akash</div>
-          <div style={{width:'10%'}}/>
-          <div className="noticeBoxDiv">akkk</div>
+
+          <div className="noticeBoxDiv1">akkk</div>
+          <div style={{ width: "5%" }} />
+
+          <div className="noticeBoxDiv">
+            <Image
+              preview={{
+                visible: false,
+              }}
+              width={300}
+              src="https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp"
+              onClick={() => setVisible(true)}
+            />
+            <div
+              style={{
+                display: "none",
+              }}
+            >
+              <Image.PreviewGroup
+                preview={{
+                  visible,
+                  onVisibleChange: (vis) => setVisible(vis),
+                }}
+              >
+                <Image src="https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp" />
+                <Image src="https://gw.alipayobjects.com/zos/antfincdn/cV16ZqzMjW/photo-1473091540282-9b846e7965e3.webp" />
+                <Image src="https://gw.alipayobjects.com/zos/antfincdn/x43I27A55%26/photo-1438109491414-7198515b166b.webp" />
+              </Image.PreviewGroup>
+            </div>
+          </div>
+
+          <div style={{ width: "5%" }} />
+          <div className="noticeBoxDiv1">akkk</div>
         </div>
-{/* 
+        {/* 
         {page == 1 ? (
           <div className="noticeBoxBody">this website is under maintenance</div>
         ) : page == 2 ? (
