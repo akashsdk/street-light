@@ -20,7 +20,11 @@ export default function NoticeBoard() {
       <div>
         <div className="noticeBoxLine" />
 
-        {page == 1 ? (
+        <div className="noticeBoxBody">
+          ddd
+        </div>
+
+        {/* {page == 1 ? (
           <div className="noticeBoxBody">this website is under maintenance</div>
         ) : page == 2 ? (
           <div className="noticeBoxBody">upcoming Messages 1</div>
@@ -37,7 +41,7 @@ export default function NoticeBoard() {
               title="There are some problems with your operation."
             />
           </div>
-        )}
+        )} */}
 
         <div className="noticeBoxLine" />
         <Pagination
