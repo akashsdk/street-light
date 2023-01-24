@@ -38,10 +38,15 @@ export default function Index() {
           </p>
         </Col>
       </Row>
+
+      <div style={{height:'40px'}}/>
+
       <div className="indecLineDive"></div>
 
+      <div style={{height:'40px'}}/>
+
       <div>
-        <p className="indexFistP">street light circuit design</p>
+        <p className="indexFistP">Street Light Circuit Design</p>
         <img src={CircuitDesign} className="indexImgeCircuit" />
       </div>
 
@@ -49,6 +54,8 @@ export default function Index() {
       {/* <div className="indecLineDive"></div>
       <Messages /> */}
       
+      <div style={{height:'40px'}}/>
+
       <div className="indecLineDive"></div>
       
       <NoticeBoard />
