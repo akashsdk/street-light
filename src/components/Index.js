@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Index.css";
 import ImgMani from "../Image/StreetMaintenance.jpeg";
-import CircuitDesign1 from "../Image/CircuitDesign.png";
 import CircuitDesign from "../Image/Screenshot 2023-01-24 at 6.15.06 PM.png"
 import Gallery from "../Card/Gallery.js";
 import NoticeBoard from "./NoticeBoard";
