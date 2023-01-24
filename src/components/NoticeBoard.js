@@ -58,7 +58,7 @@ export default function NoticeBoard() {
         <div className="noticeBoxLine" />
 
         {page == 1 ? (
-          <div className="noticeBoxBody">this website is under maintenance</div>
+          <div className="noticeBoxBody">upcoming Messages 1</div>
         ) : page == 2 ? (
           // Calendar
           <div className="noticeBoxBody">
@@ -172,7 +172,7 @@ export default function NoticeBoard() {
             </div>
           </div>
         ) : page == 5 ? (
-          <div className="noticeBoxBody">upcoming Messages 4</div>
+          <div className="noticeBoxBody">upcoming Messages 5</div>
         ) : (
           // Error Page
           <div style={{ marginTop: "70px" }}>
