@@ -37,7 +37,7 @@ export default function NoticeBoard() {
   return (
     <div className="noticeBody">
       {page == 1 ? (
-        <p className="noticeHedertext">Notice Board1</p>
+        <p className="noticeHedertext">Board-1</p>
       ) : page == 2 ? (
         // Calendar
         <p className="noticeHedertext">Calendar</p>
@@ -48,7 +48,7 @@ export default function NoticeBoard() {
         // Events
         <p className="noticeHedertext">Events</p>
       ) : page == 5 ? (
-        <p className="noticeHedertext">Notice Board5</p>
+        <p className="noticeHedertext">Board-5</p>
       ) : (
         // Error Page
         <p className="noticeHedertext">Error !!</p>
