@@ -92,7 +92,7 @@ export default function System() {
         {
           data ? (
             data.map((d, i) => (
-              <LightCart refresh={setLoad} key={i} num={d.number} LDR={d.ldr ? 'ON' : 'OFF'} Sensor={d.sensor ? 'ON' : 'OFF'} />
+              <LightCart refresh={setLoad} key={i} num={d.number} LDR={d.ldr ? 'ON' : 'OFF'} Sensor={d.sensor ? 'OFF' : 'ON'} />
             ))
           ) : (<></>)
         }
