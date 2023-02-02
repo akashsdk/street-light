@@ -198,12 +198,12 @@ export default function LogIn(props) {
                 </div>
             </div>
 
-            <div>
+            {/* <div>
                 <h3>
                     user ID: "someone@gmail.com", {"\n"}
                     Password: "123456"
                 </h3>
-            </div>
+            </div> */}
 
             <div>
                 <Drawer
