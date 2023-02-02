@@ -62,7 +62,7 @@ export default function Index() {
 
 
       <div>
-        <p style={{color:'black', fontSize:'25px'}}></p>
+        <p style={{color:'black', fontSize:'25px'}}>this website is under maintenance !!</p>
       </div>
 
       
