@@ -14,13 +14,13 @@ export default function Messages() {
               this website is under maintenance 
             </p>
           ) : page == 2 ? (
-            <p className="indecNoticeText">upcoming Messages 1</p>
+            <p className="indecNoticeText">upcoming Messages 01</p>
           ) : page == 3 ? (
-            <p className="indecNoticeText">upcoming notice 2</p>
+            <p className="indecNoticeText">upcoming notice 02</p>
           ) : page == 4 ? (
-            <p className="indecNoticeText">upcoming notice 3</p>
+            <p className="indecNoticeText">upcoming notice 03</p>
           ) : page == 5 ? (
-            <p className="indecNoticeText">upcoming notice 4</p>
+            <p className="indecNoticeText">upcoming notice 04</p>
           ) : (
             <p className="indecNoticeText">Error</p>
           )}
