@@ -60,3 +60,11 @@
 .LightCartBodyP{
     margin-left: 50px;
 }
+.LightCartONButton{
+    border: none;
+    height: 1px;
+    width: 1px;
+    background-color: aqua;
+    margin-top: 15px;
+    margin-left: 15px;
+}
