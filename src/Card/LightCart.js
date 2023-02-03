@@ -37,7 +37,7 @@ export default function LightCart(props) {
   const error = () => {
     messageApi.open({
       type: "error",
-      content: "This is an error message",
+      content: value ? "ON" : "OFF",
     });
   };
 
