@@ -473,7 +473,7 @@ export default function Admin() {
           page == 3 ? (
             <div className="adminRight">
               <div className="adminRightTitel">
-                <h1>Contact Use</h1>
+                <h1>Contact Us</h1>
                 <FaRegTrashAlt
                   onClick={DeleteContact}
                   className="adminRightTitelIcon"
